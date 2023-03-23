@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if (currentTime >= maxTime) {
+		//add in logic to make the start button disappear?
 		selectAxes.gameObject.SetActive(true);
 		selectCoins.gameObject.SetActive(true);
 		return;
