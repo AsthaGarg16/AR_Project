@@ -803,7 +803,7 @@ IL2CPP_EXTERN_C RuntimeClass* UnobservedTaskExceptionEventArgs_tCEC9720EE76432B9
 IL2CPP_EXTERN_C RuntimeClass* ValueTaskSourceAsTask_t728D12A19A662B3CC16A6F4E07F0FCBA89B24C35_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ValueTask_t10B4B5DDF5C582607D0E634FA912F8CB94FCD49F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitCallback_tFB2C7FD58D024BBC2B0333DC7A4CB63B8DEBD5D3_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FB2089AF82E09593374B65EC2440779FDCF5DD6DA07D26E57AF6790667B937CD_118_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FB2089AF82E09593374B65EC2440779FDCF5DD6DA07D26E57AF6790667B937CD_119_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral020E615649937BE38B7631FD6225E74637565030;
 IL2CPP_EXTERN_C String_t* _stringLiteral062DB096C728515E033CF8C48A1C1F0B9A79384B;
 IL2CPP_EXTERN_C String_t* _stringLiteral06E0CA351F4287D5225FDC56CF259537CD7CDDDA;
@@ -2357,6 +2357,40 @@ struct TimerComparer_tA489751F7F61781F51DFF2033BCA60B91C1B2C50
 	};
 };
 
+// System.Threading.Volatile/VolatileBoolean
+struct VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041 
+{
+	// System.Boolean modreq(System.Runtime.CompilerServices.IsVolatile) System.Threading.Volatile/VolatileBoolean::Value
+	bool ___Value_0;
+};
+// Native definition for P/Invoke marshalling of System.Threading.Volatile/VolatileBoolean
+struct VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_pinvoke
+{
+	int32_t ___Value_0;
+};
+// Native definition for COM marshalling of System.Threading.Volatile/VolatileBoolean
+struct VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_com
+{
+	int32_t ___Value_0;
+};
+
+// System.Threading.Volatile/VolatileInt32
+struct VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693 
+{
+	// System.Int32 modreq(System.Runtime.CompilerServices.IsVolatile) System.Threading.Volatile/VolatileInt32::Value
+	int32_t ___Value_0;
+};
+// Native definition for P/Invoke marshalling of System.Threading.Volatile/VolatileInt32
+struct VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_pinvoke
+{
+	int32_t ___Value_0;
+};
+// Native definition for COM marshalling of System.Threading.Volatile/VolatileInt32
+struct VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_com
+{
+	int32_t ___Value_0;
+};
+
 // System.Threading.Volatile/VolatileObject
 struct VolatileObject_tEA3ACFAAFB9D2EFA5162F693BAAB342EA7737B99 
 {
@@ -3883,6 +3917,14 @@ struct ValueTask_t10B4B5DDF5C582607D0E634FA912F8CB94FCD49F_StaticFields
 // System.Threading.Timer/TimerComparer
 
 // System.Threading.Timer/TimerComparer
+
+// System.Threading.Volatile/VolatileBoolean
+
+// System.Threading.Volatile/VolatileBoolean
+
+// System.Threading.Volatile/VolatileInt32
+
+// System.Threading.Volatile/VolatileInt32
 
 // System.Threading.Volatile/VolatileObject
 
@@ -7347,6 +7389,123 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimerCallback_Invoke_m088838D96004296DD8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Boolean System.Threading.Volatile::Read(System.Boolean&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Volatile_Read_mFB26955190C17E3E35A2FE8954200CC077DB6C49 (bool* ___0_location, const RuntimeMethod* method) 
+{
+	{
+		bool* L_0 = ___0_location;
+		VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041* L_1;
+		L_1 = il2cpp_unsafe_as_ref<VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041>(L_0);
+		bool L_2 = L_1->___Value_0;
+		il2cpp_codegen_memory_barrier();
+		return L_2;
+	}
+}
+// System.Int32 System.Threading.Volatile::Read(System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Volatile_Read_mF665C6F65E2BE942262A5418C0CD4581B515CDA1 (int32_t* ___0_location, const RuntimeMethod* method) 
+{
+	{
+		int32_t* L_0 = ___0_location;
+		VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693* L_1;
+		L_1 = il2cpp_unsafe_as_ref<VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693>(L_0);
+		int32_t L_2 = L_1->___Value_0;
+		il2cpp_codegen_memory_barrier();
+		return L_2;
+	}
+}
+// System.Void System.Threading.Volatile::Write(System.Int32&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Volatile_Write_m58FCC8D71E5ABA4CC7634A3C6C80489010AD6AC4 (int32_t* ___0_location, int32_t ___1_value, const RuntimeMethod* method) 
+{
+	{
+		int32_t* L_0 = ___0_location;
+		VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693* L_1;
+		L_1 = il2cpp_unsafe_as_ref<VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693>(L_0);
+		int32_t L_2 = ___1_value;
+		il2cpp_codegen_memory_barrier();
+		L_1->___Value_0 = L_2;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Conversion methods for marshalling of: System.Threading.Volatile/VolatileBoolean
+IL2CPP_EXTERN_C void VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshal_pinvoke(const VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041& unmarshaled, VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_pinvoke& marshaled)
+{
+	marshaled.___Value_0 = static_cast<int32_t>(unmarshaled.___Value_0);
+}
+IL2CPP_EXTERN_C void VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshal_pinvoke_back(const VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_pinvoke& marshaled, VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041& unmarshaled)
+{
+	bool unmarshaledValue_temp_0;
+	memset((&unmarshaledValue_temp_0), 0, sizeof(unmarshaledValue_temp_0));
+	unmarshaledValue_temp_0 = static_cast<bool>(marshaled.___Value_0);
+	unmarshaled.___Value_0 = unmarshaledValue_temp_0;
+}
+// Conversion method for clean up from marshalling of: System.Threading.Volatile/VolatileBoolean
+IL2CPP_EXTERN_C void VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshal_pinvoke_cleanup(VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: System.Threading.Volatile/VolatileBoolean
+IL2CPP_EXTERN_C void VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshal_com(const VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041& unmarshaled, VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_com& marshaled)
+{
+	marshaled.___Value_0 = static_cast<int32_t>(unmarshaled.___Value_0);
+}
+IL2CPP_EXTERN_C void VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshal_com_back(const VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_com& marshaled, VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041& unmarshaled)
+{
+	bool unmarshaledValue_temp_0;
+	memset((&unmarshaledValue_temp_0), 0, sizeof(unmarshaledValue_temp_0));
+	unmarshaledValue_temp_0 = static_cast<bool>(marshaled.___Value_0);
+	unmarshaled.___Value_0 = unmarshaledValue_temp_0;
+}
+// Conversion method for clean up from marshalling of: System.Threading.Volatile/VolatileBoolean
+IL2CPP_EXTERN_C void VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshal_com_cleanup(VolatileBoolean_t9E1B0E7929E736D122D1C494D49E80C90874D041_marshaled_com& marshaled)
+{
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Conversion methods for marshalling of: System.Threading.Volatile/VolatileInt32
+IL2CPP_EXTERN_C void VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshal_pinvoke(const VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693& unmarshaled, VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_pinvoke& marshaled)
+{
+	marshaled.___Value_0 = unmarshaled.___Value_0;
+}
+IL2CPP_EXTERN_C void VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshal_pinvoke_back(const VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_pinvoke& marshaled, VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693& unmarshaled)
+{
+	int32_t unmarshaledValue_temp_0;
+	memset((&unmarshaledValue_temp_0), 0, sizeof(unmarshaledValue_temp_0));
+	unmarshaledValue_temp_0 = marshaled.___Value_0;
+	unmarshaled.___Value_0 = unmarshaledValue_temp_0;
+}
+// Conversion method for clean up from marshalling of: System.Threading.Volatile/VolatileInt32
+IL2CPP_EXTERN_C void VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshal_pinvoke_cleanup(VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_pinvoke& marshaled)
+{
+}
+// Conversion methods for marshalling of: System.Threading.Volatile/VolatileInt32
+IL2CPP_EXTERN_C void VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshal_com(const VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693& unmarshaled, VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_com& marshaled)
+{
+	marshaled.___Value_0 = unmarshaled.___Value_0;
+}
+IL2CPP_EXTERN_C void VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshal_com_back(const VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_com& marshaled, VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693& unmarshaled)
+{
+	int32_t unmarshaledValue_temp_0;
+	memset((&unmarshaledValue_temp_0), 0, sizeof(unmarshaledValue_temp_0));
+	unmarshaledValue_temp_0 = marshaled.___Value_0;
+	unmarshaled.___Value_0 = unmarshaledValue_temp_0;
+}
+// Conversion method for clean up from marshalling of: System.Threading.Volatile/VolatileInt32
+IL2CPP_EXTERN_C void VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshal_com_cleanup(VolatileInt32_tF87437D9108A3B42A6D3DA0147CD8B00C0538693_marshaled_com& marshaled)
+{
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -31064,7 +31223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Latin1Encoding__cctor_m7BA4D039F1B432863
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FB2089AF82E09593374B65EC2440779FDCF5DD6DA07D26E57AF6790667B937CD_118_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FB2089AF82E09593374B65EC2440779FDCF5DD6DA07D26E57AF6790667B937CD_119_FieldInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -31075,7 +31234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Latin1Encoding__cctor_m7BA4D039F1B432863
 		Il2CppCodeGenWriteBarrier((void**)(&((Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_StaticFields*)il2cpp_codegen_static_fields_for(Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_il2cpp_TypeInfo_var))->___s_default_16), (void*)L_0);
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_1 = (CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)SZArrayNew(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var, (uint32_t)((int32_t)604));
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_2 = L_1;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_3 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FB2089AF82E09593374B65EC2440779FDCF5DD6DA07D26E57AF6790667B937CD_118_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_3 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FB2089AF82E09593374B65EC2440779FDCF5DD6DA07D26E57AF6790667B937CD_119_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_2, L_3, NULL);
 		((Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_StaticFields*)il2cpp_codegen_static_fields_for(Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_il2cpp_TypeInfo_var))->___arrayCharBestFit_17 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&((Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_StaticFields*)il2cpp_codegen_static_fields_for(Latin1Encoding_tF5EC828C70CA7D1D145050935A933A7C2587967F_il2cpp_TypeInfo_var))->___arrayCharBestFit_17), (void*)L_2);

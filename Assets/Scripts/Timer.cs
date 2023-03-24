@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
     public Text timerText;
     private float currentTime;
-    private float maxTime = 1500.0f; // 25 minutes in seconds
+    private float maxTime = 10.0f; // 25 minutes in seconds
     public Button selectAxes;
     public Button selectCoins;
 
@@ -18,12 +18,13 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (currentTime >= maxTime) {
-		//add in logic to make the start button disappear?
-		selectAxes.gameObject.SetActive(true);
-		selectCoins.gameObject.SetActive(true);
-		return;
-	  }
+        if (currentTime >= maxTime)
+        {
+            //add in logic to make the start button disappear?
+            selectAxes.gameObject.SetActive(true);
+            selectCoins.gameObject.SetActive(true);
+            return;
+        }
 
         currentTime += Time.deltaTime;
         currentTime = Mathf.Clamp(currentTime, 0.0f, maxTime);
