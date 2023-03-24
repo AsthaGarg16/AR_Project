@@ -16,9 +16,9 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsConnected)
         {
-            if (!string.IsNullOrEmpty(input_join.text))
+            if (!string.IsNullOrEmpty(input_create.text))
             {
-                PhotonNetwork.CreateRoom(input_create.text, new RoomOptions() { IsVisible = true, IsOpen = true }) ;
+                PhotonNetwork.CreateRoom(input_create.text, new RoomOptions() { IsVisible = true, IsOpen = true }, TypedLobby.Default, null) ;
             }
         }
     }

@@ -10,6 +10,7 @@ public class RoomList : MonoBehaviourPunCallbacks
     public GameObject[] AllRooms;
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        Debug.Log("roomlistupdate");
         for(int i=0;i<AllRooms.Length;i++)
         {
             if(AllRooms[i]!=null)
@@ -18,6 +19,7 @@ public class RoomList : MonoBehaviourPunCallbacks
             }
         }
         AllRooms = new GameObject[roomList.Count];
+        Debug.Log("No of rooms " + roomList.Count);
         for(int i=0; i<roomList.Count;i++)
         {
             print(roomList[i].Name);
