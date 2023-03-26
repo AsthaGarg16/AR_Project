@@ -2,18 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RewardManagement : MonoBehaviour
 {
     public Text AxeDisplay;
     public Text CoinsDisplay;
-    private int axes = 0;
-    private int coins = 0;
+    private int axes;
+    private int coins;
+    public GameObject options;
+    public GameObject defaultbuttons;
+    public GameObject buyingpanel;
+    public GameObject mainPanel;
+    public GameObject Error;
+    public TextMeshProUGUI errortext;
+    public Button buy1;
+    public Button buy2;
+    public Button buy3;
+    [SerializeField] public int treeID;
+    [SerializeField] public int price;
+    private bool bought = false;
     // Start is called before the first frame update
     void Start()
     {
-        AxeDisplay.text = "Axes: "+axes.ToString();
-	  CoinsDisplay.text = "Coins: "+coins.ToString();	
+	  PlayerPrefs.SetInt("axes", 0);
+	  PlayerPrefs.SetInt("coins", 0);
+        AxeDisplay.text = "Axes: 0";
+	  CoinsDisplay.text = "Coins: 0";	
     }
 
     // Update is called once per frame
@@ -23,15 +38,62 @@ public class RewardManagement : MonoBehaviour
     }
     //add in logic to make start button reappear after?
     public void selectAxeReward(){
+	axes = PlayerPrefs.GetInt("axes");
 	axes+=1;
 	AxeDisplay.text = "Axes: "+axes.ToString();
+	PlayerPrefs.SetInt("axes", axes);
+	options.gameObject.SetActive(false);
+	defaultbuttons.gameObject.SetActive(true);
     }
     public void selectCoinReward(){
+	coins = PlayerPrefs.GetInt("coins");
 	coins+=10;
 	CoinsDisplay.text = "Coins: "+coins.ToString();
+	PlayerPrefs.SetInt("coins", coins);
+	options.gameObject.SetActive(false);
+	defaultbuttons.gameObject.SetActive(true);
     }
     public void chopfriendtree(){
 	//implement logic for reduce axes and photon tie in
 	Debug.Log("This is working");
+    }
+    public void buyingPanel(){
+	//implement logic of displaying the buy panel and disable the current panel
+      buyingpanel.gameObject.SetActive(true);
+	mainPanel.gameObject.SetActive(false);
+    }
+    public void buyingTree(int price){
+	// this method stores the treeID if used to plant next tree and deducts the price of the tree from coins
+	coins = PlayerPrefs.GetInt("coins");
+	if (price>coins){
+		buy1.interactable = false;
+		buy2.interactable = false;
+		buy3.interactable = false;
+		Error.gameObject.SetActive(true);
+		errortext.text ="You do not have enough coins.Please Try Again";
+	}
+	else{
+		coins= coins - price;
+		bought = true;
+		PlayerPrefs.SetInt("coins",coins);
+		buyingpanel.gameObject.SetActive(false);
+		mainPanel.gameObject.SetActive(true);
+	}
+    }
+    public void storetree(int treeID){
+	if (bought == true){
+		PlayerPrefs.SetInt("tree",treeID);
+		bought =  false;
+	}
+    }
+    public void clearerror(){
+	Error.gameObject.SetActive(false);
+	buy1.interactable = true;
+	buy2.interactable = true;
+	buy3.interactable = true;
+    }
+    public void returnbacktomain(){
+	buyingpanel.gameObject.SetActive(false);
+	mainPanel.gameObject.SetActive(true);
     }
 }
