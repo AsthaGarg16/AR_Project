@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using Photon.Pun;
 
+using Hashtable = ExitGames.Client.Photon.Hashtable;
+
 public class ProfileManager : MonoBehaviour
 {
     public TMP_InputField usernameInput;
@@ -21,5 +23,19 @@ public class ProfileManager : MonoBehaviour
     public void SetUsername()
     {
         PhotonNetwork.NickName = usernameInput.text;
+    }
+
+    public void SetAvatar1()
+    {
+        var hash = PhotonNetwork.LocalPlayer.CustomProperties;
+        hash.Add("Avatar", "Avatar1");
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+    }
+
+    public void SetAvatar2()
+    {
+        var hash = PhotonNetwork.LocalPlayer.CustomProperties;
+        hash.Add("Avatar", "Avatar2");
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
     }
 }
