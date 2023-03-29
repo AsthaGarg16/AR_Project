@@ -1934,7 +1934,7 @@ GameObject:
   - component: {fileID: 749721898}
   - component: {fileID: 749721897}
   - component: {fileID: 749721896}
-  - component: {fileID: 749721895}
+  - component: {fileID: 749721899}
   m_Layer: 0
   m_Name: Driving Surface Manager
   m_TagString: Untagged
@@ -1957,18 +1957,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &749721895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749721893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8239ac33729c5e46aea97488e36373a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &749721896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,6 +1997,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 0}
+--- !u!114 &749721899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749721893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226dcc8d7dc682246ba355755aae768e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlaneManager: {fileID: 0}
+  RaycastManager: {fileID: 0}
+  LockedPlane: {fileID: 0}
 --- !u!224 &780258695 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3755485326032464311, guid: 0b060e907b968af42873a36e98326bf1,
