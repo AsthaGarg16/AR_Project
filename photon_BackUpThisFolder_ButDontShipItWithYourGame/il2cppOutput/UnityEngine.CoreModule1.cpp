@@ -1450,6 +1450,15 @@ struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974
 	float ___w_3;
 };
 
+// UnityEngine.RangeInt
+struct RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 
+{
+	// System.Int32 UnityEngine.RangeInt::start
+	int32_t ___start_0;
+	// System.Int32 UnityEngine.RangeInt::length
+	int32_t ___length_1;
+};
+
 // UnityEngine.RequireComponent
 struct RequireComponent_t8DDD209443A8519033BD1B38803A47077D2A1138  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
@@ -2726,6 +2735,10 @@ struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_StaticFields
 
 // UnityEngine.Quaternion
 
+// UnityEngine.RangeInt
+
+// UnityEngine.RangeInt
+
 // UnityEngine.RequireComponent
 
 // UnityEngine.RequireComponent
@@ -3589,6 +3602,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_RemoveAt_m7476D799F5CC07697D44785
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.UnitySynchronizationContext/WorkRequest>::get_Count()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m2F90A932E325FFA55047769F5E45E453D80C27D1_gshared_inline (List_1_t115BFDF2D524B656F091D4CBADCF1C35287684B4* __this, const RuntimeMethod* method) ;
 
+// System.Int32 UnityEngine.RangeInt::get_end()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63 (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.RangeInt::.ctor(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method) ;
 // TResult System.Func`1<System.Boolean>::Invoke()
 inline bool Func_1_Invoke_mBB7F37C468451AF57FAF31635C544D6B8C4373B2_inline (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* __this, const RuntimeMethod* method)
 {
@@ -4393,6 +4410,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpookyHash_ShortEnd_mD9C5C095F70885B3355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SpookyHash_AttemptDetectAllowUnalignedRead_m86DA767EE5513E9AA6E8A142C7E1F56BF19F8438 (const RuntimeMethod* method) ;
 // System.Void System.Array::Clear(System.Array,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___0_array, int32_t ___1_index, int32_t ___2_length, const RuntimeMethod* method) ;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Int32 UnityEngine.RangeInt::get_end()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63 (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___start_0;
+		int32_t L_1 = __this->___length_1;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_0, L_1));
+		goto IL_0011;
+	}
+
+IL_0011:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+IL2CPP_EXTERN_C  int32_t RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void UnityEngine.RangeInt::.ctor(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_start;
+		__this->___start_0 = L_0;
+		int32_t L_1 = ___1_length;
+		__this->___length_1 = L_1;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE_AdjustorThunk (RuntimeObject* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method)
+{
+	RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268*>(__this + _offset);
+	RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE(_thisAdjusted, ___0_start, ___1_length, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

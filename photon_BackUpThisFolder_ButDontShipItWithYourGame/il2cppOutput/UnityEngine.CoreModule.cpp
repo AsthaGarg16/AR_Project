@@ -814,6 +814,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* NoAllocHelpers_SafeLength_TisVector3_t24C51
 IL2CPP_EXTERN_C const RuntimeMethod* NoAllocHelpers_SafeLength_TisVector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3_m201A65A21E6A7CC7D1A0C35A7D5CEBE2DD8A49B2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PlayerConnectionInternal_UnityEngine_IPlayerEditorConnectionNative_SendMessage_m561CA89041EBAFF52314B0D35F7335AF03690EE2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PlayerConnectionInternal_UnityEngine_IPlayerEditorConnectionNative_TrySendMessage_mD5B897823668810AC92B7A4DB37D2AC469B5AD92_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ProfilerRecorderHandle_GetDescription_m36ED173129163F38DE61174AF7FE665B83BE834D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ProfilerRecorder_CheckInitializedAndThrow_mAB0CE58CF289299860D921591CC3626D16EDF05F_RuntimeMethod_var;
@@ -6733,10 +6734,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_MemSet_m4CD74CD43260EB2962A46F57E0D93DD5C332FC2B (void* ___0_destination, uint8_t ___1_value, int64_t ___2_size, const RuntimeMethod* method) ;
 // System.Void System.Exception::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___0_message, const RuntimeMethod* method) ;
-// System.Boolean UnityEngine.PlayerPrefs::TrySetSetString(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_TrySetSetString_m801A5CB66F2C5AC8AE768B041E770FB08329C238 (String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.PlayerPrefs::TrySetInt(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_TrySetInt_mDA9E314012D21BB1B5877C830E784F4E8D69BA3E (String_t* ___0_key, int32_t ___1_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.PlayerPrefsException::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefsException__ctor_m89A0364957C9AD220773C847E9AD8D54FED067FB (PlayerPrefsException_t960857DB45C7B0D7B7CEAC7FBA346D68DBDA0CB5* __this, String_t* ___0_error, const RuntimeMethod* method) ;
+// System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D (String_t* ___0_key, int32_t ___1_defaultValue, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.PlayerPrefs::TrySetSetString(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_TrySetSetString_m801A5CB66F2C5AC8AE768B041E770FB08329C238 (String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method) ;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2 (String_t* ___0_key, String_t* ___1_defaultValue, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Keyframe::.ctor(System.Single,System.Single)
@@ -8381,10 +8386,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Component_t39FBE53E5EFCF4409111FB22C15FF73717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_Internal_CreateGameObject_mA49D858513048B4CF239D4201C89903F4ECE8498 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_self, String_t* ___1_name, const RuntimeMethod* method) ;
 // UnityEngine.Component UnityEngine.GameObject::AddComponent(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* GameObject_AddComponent_mDF246771EC34613FA6AF0C98D443368FB43E9F36 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, Type_t* ___0_componentType, const RuntimeMethod* method) ;
-// System.Int32 UnityEngine.RangeInt::get_end()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63 (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.RangeInt::.ctor(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)
@@ -11538,6 +11539,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefsException__ctor_m89A0364957C9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Boolean UnityEngine.PlayerPrefs::TrySetInt(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_TrySetInt_mDA9E314012D21BB1B5877C830E784F4E8D69BA3E (String_t* ___0_key, int32_t ___1_value, const RuntimeMethod* method) 
+{
+	typedef bool (*PlayerPrefs_TrySetInt_mDA9E314012D21BB1B5877C830E784F4E8D69BA3E_ftn) (String_t*, int32_t);
+	static PlayerPrefs_TrySetInt_mDA9E314012D21BB1B5877C830E784F4E8D69BA3E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (PlayerPrefs_TrySetInt_mDA9E314012D21BB1B5877C830E784F4E8D69BA3E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.PlayerPrefs::TrySetInt(System.String,System.Int32)");
+	bool icallRetVal = _il2cpp_icall_func(___0_key, ___1_value);
+	return icallRetVal;
+}
 // System.Boolean UnityEngine.PlayerPrefs::TrySetSetString(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_TrySetSetString_m801A5CB66F2C5AC8AE768B041E770FB08329C238 (String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method) 
 {
@@ -11547,6 +11558,62 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_TrySetSetString_m801A5CB66F2
 	_il2cpp_icall_func = (PlayerPrefs_TrySetSetString_m801A5CB66F2C5AC8AE768B041E770FB08329C238_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.PlayerPrefs::TrySetSetString(System.String,System.String)");
 	bool icallRetVal = _il2cpp_icall_func(___0_key, ___1_value);
 	return icallRetVal;
+}
+// System.Void UnityEngine.PlayerPrefs::SetInt(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948 (String_t* ___0_key, int32_t ___1_value, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		String_t* L_0 = ___0_key;
+		int32_t L_1 = ___1_value;
+		bool L_2;
+		L_2 = PlayerPrefs_TrySetInt_mDA9E314012D21BB1B5877C830E784F4E8D69BA3E(L_0, L_1, NULL);
+		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		PlayerPrefsException_t960857DB45C7B0D7B7CEAC7FBA346D68DBDA0CB5* L_4 = (PlayerPrefsException_t960857DB45C7B0D7B7CEAC7FBA346D68DBDA0CB5*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PlayerPrefsException_t960857DB45C7B0D7B7CEAC7FBA346D68DBDA0CB5_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		PlayerPrefsException__ctor_m89A0364957C9AD220773C847E9AD8D54FED067FB(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4A4C03580B87CA62119DAC9A0EE8D32779B4F031)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948_RuntimeMethod_var)));
+	}
+
+IL_001a:
+	{
+		return;
+	}
+}
+// System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D (String_t* ___0_key, int32_t ___1_defaultValue, const RuntimeMethod* method) 
+{
+	typedef int32_t (*PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D_ftn) (String_t*, int32_t);
+	static PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.PlayerPrefs::GetInt(System.String,System.Int32)");
+	int32_t icallRetVal = _il2cpp_icall_func(___0_key, ___1_defaultValue);
+	return icallRetVal;
+}
+// System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerPrefs_GetInt_m4D859DBEABAD3FB406C94485A0B2638A0C7F2987 (String_t* ___0_key, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		String_t* L_0 = ___0_key;
+		int32_t L_1;
+		L_1 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(L_0, 0, NULL);
+		V_0 = L_1;
+		goto IL_000b;
+	}
+
+IL_000b:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
 }
 // System.Void UnityEngine.PlayerPrefs::SetString(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256 (String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method) 
@@ -39981,58 +40048,6 @@ IL_0005:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = V_0;
 		return L_0;
 	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Int32 UnityEngine.RangeInt::get_end()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63 (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->___start_0;
-		int32_t L_1 = __this->___length_1;
-		V_0 = ((int32_t)il2cpp_codegen_add(L_0, L_1));
-		goto IL_0011;
-	}
-
-IL_0011:
-	{
-		int32_t L_2 = V_0;
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C  int32_t RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
-{
-	RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268*>(__this + _offset);
-	int32_t _returnValue;
-	_returnValue = RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63(_thisAdjusted, method);
-	return _returnValue;
-}
-// System.Void UnityEngine.RangeInt::.ctor(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE (RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method) 
-{
-	{
-		int32_t L_0 = ___0_start;
-		__this->___start_0 = L_0;
-		int32_t L_1 = ___1_length;
-		__this->___length_1 = L_1;
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE_AdjustorThunk (RuntimeObject* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method)
-{
-	RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268*>(__this + _offset);
-	RangeInt__ctor_m3CB91E79C7B5AED97E564581025B2F66778B7CBE(_thisAdjusted, ___0_start, ___1_length, method);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
