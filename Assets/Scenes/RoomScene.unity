@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68.05322, y: 145.05469}
+  m_AnchoredPosition: {x: 68.05322, y: 154}
   m_SizeDelta: {x: 169.8936, y: 37.8907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30830011
@@ -680,6 +680,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chop Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755485326032464310, guid: 0b060e907b968af42873a36e98326bf1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1500286210}
+    - target: {fileID: 3755485326032464310, guid: 0b060e907b968af42873a36e98326bf1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: chopfriendtree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755485326032464310, guid: 0b060e907b968af42873a36e98326bf1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RewardManagement, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3755485326032464311, guid: 0b060e907b968af42873a36e98326bf1,
         type: 3}
@@ -2747,7 +2762,7 @@ PrefabInstance:
     - target: {fileID: 3755485326032464311, guid: 0b060e907b968af42873a36e98326bf1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 321
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 3755485326032464311, guid: 0b060e907b968af42873a36e98326bf1,
         type: 3}
