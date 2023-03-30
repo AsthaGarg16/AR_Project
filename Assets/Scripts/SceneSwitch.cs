@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    public string sceneToLoad = "Room Scene";
+    public string sceneToLoad;
 
     public void SwitchScene()
     {
