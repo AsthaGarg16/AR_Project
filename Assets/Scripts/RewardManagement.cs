@@ -56,7 +56,19 @@ public class RewardManagement : MonoBehaviour
     }
     public void chopfriendtree(){
 	//implement logic for reduce axes and photon tie in
-	Debug.Log("This is working");
+	axes = PlayerPrefs.GetInt("axes");
+	if (axes>=1){
+		axes = axes - 1;
+		PlayerPrefs.SetInt("axes",axes);
+		axes= PlayerPrefs.GetInt("axes");
+		AxeDisplay.text = "Axes: "+axes.ToString();
+		//photon tie in to remove the tree
+	}
+	else{
+		//may need to make other things inactive
+		Error.gameObject.SetActive(true);
+		errortext.text ="You do not have enough axes.Please Try Again";
+	}
     }
     public void buyingPanel(){
 	//implement logic of displaying the buy panel and disable the current panel
