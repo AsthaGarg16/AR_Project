@@ -1,9 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
-public class Surfacehelper : MonoBehaviour
+public class Surface : MonoBehaviour
 {
     public ARPlaneManager PlaneManager;
     public ARRaycastManager RaycastManager;

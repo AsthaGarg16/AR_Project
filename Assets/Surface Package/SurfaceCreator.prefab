@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2080369339933002899}
   - component: {fileID: 407567435925043997}
   m_Layer: 0
-  m_Name: Driving Surface Plane
+  m_Name: SurfaceCreator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

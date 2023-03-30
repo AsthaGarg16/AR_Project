@@ -27,6 +27,7 @@ public class RewardManagement : MonoBehaviour
     {
 	  PlayerPrefs.SetInt("axes", 0);
 	  PlayerPrefs.SetInt("coins", 0);
+	  PlayerPrefs.SetInt("tree", 0);
         AxeDisplay.text = "Axes: 0";
 	  CoinsDisplay.text = "Coins: 0";	
     }
@@ -78,11 +79,13 @@ public class RewardManagement : MonoBehaviour
 		PlayerPrefs.SetInt("coins",coins);
 		buyingpanel.gameObject.SetActive(false);
 		mainPanel.gameObject.SetActive(true);
+		coins= PlayerPrefs.GetInt("coins");
+		CoinsDisplay.text = "Coins: "+coins.ToString();
 	}
     }
     public void storetree(int treeID){
 	if (bought == true){
-		PlayerPrefs.SetInt("tree",treeID);
+		PlayerPrefs.SetInt("tree",3);
 		bought =  false;
 	}
     }
