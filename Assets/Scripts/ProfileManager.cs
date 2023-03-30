@@ -9,11 +9,6 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class ProfileManager : MonoBehaviour
 {
     public TMP_InputField usernameInput;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void SaveProfile()
     {
@@ -23,6 +18,7 @@ public class ProfileManager : MonoBehaviour
     public void SetUsername()
     {
         PhotonNetwork.NickName = usernameInput.text;
+        PlayerPrefs.SetString("username", usernameInput.text);
     }
 
     public void SetAvatar1()
@@ -30,6 +26,8 @@ public class ProfileManager : MonoBehaviour
         var hash = PhotonNetwork.LocalPlayer.CustomProperties;
         hash.Add("Avatar", "Avatar1");
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+        PlayerPrefs.SetString("avatar", "Avatar1");
+        Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties);
     }
 
     public void SetAvatar2()
@@ -37,5 +35,7 @@ public class ProfileManager : MonoBehaviour
         var hash = PhotonNetwork.LocalPlayer.CustomProperties;
         hash.Add("Avatar", "Avatar2");
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+        PlayerPrefs.SetString("avatar", "Avatar2");
+        Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties);
     }
 }
