@@ -19,7 +19,9 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
         {
             if (!string.IsNullOrEmpty(input_create.text))
             {
-                PhotonNetwork.CreateRoom(input_create.text, new RoomOptions() { IsVisible = true, IsOpen = true }, TypedLobby.Default, null) ;
+                ExitGames.Client.Photon.Hashtable roomProps = new ExitGames.Client.Photon.Hashtable();
+                roomProps.Add("GardenIndex", 0);
+                PhotonNetwork.CreateRoom(input_create.text, new RoomOptions() { IsVisible = true, IsOpen = true, CustomRoomProperties = roomProps }, TypedLobby.Default, null) ;
             }
         }
     }
