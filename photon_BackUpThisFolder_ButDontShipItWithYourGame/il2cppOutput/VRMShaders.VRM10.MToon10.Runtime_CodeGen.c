@@ -242,17 +242,17 @@ static const int32_t s_InvokerIndices[59] =
 	8960,
 	12532,
 	12532,
-	14353,
+	14354,
 	11871,
 	7212,
 	8973,
 	10096,
 	12994,
-	14574,
-	15461,
-	15414,
-	14254,
-	15461,
+	14575,
+	15462,
+	15415,
+	14255,
+	15462,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_VRMShaders_VRM10_MToon10_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_VRMShaders_VRM10_MToon10_Runtime_CodeGenModule = 

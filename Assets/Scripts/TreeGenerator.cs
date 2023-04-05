@@ -83,11 +83,15 @@ public class TreeGenerator : MonoBehaviour
          {
                 if (select_tree == 0)
                 {
-                    //Destroy(rootNode);
+                //Destroy(rootNode);
+                    Object.Destroy(transform.GetChild(0).gameObject);
+
                     rootNode2 = Instantiate(treePrefab2);
                     rootNode2.transform.parent = transform;
                     rootNode2.transform.localPosition = Vector3.zero;
                     rootNode2.transform.localRotation = Quaternion.identity;
+
+                    
                 }
                 /*rootNode = Instantiate(treePrefab);
                 rootNode.transform.parent = transform;
@@ -96,6 +100,7 @@ public class TreeGenerator : MonoBehaviour
 
                 if (select_tree == 1)
                 {
+                //Object.Destroy(transform.GetChild(0));
                     rootNode2 = Instantiate(treePrefab2);
                     rootNode2.transform.parent = transform;
                     rootNode2.transform.localPosition = Vector3.zero;
@@ -119,51 +124,6 @@ public class TreeGenerator : MonoBehaviour
 
     }
 
-        /*if (Time.time == 8.0)
-        {
-            Destroy(rootNode);
-            rootNode2 = Instantiate(treePrefab2);
-            rootNode2.transform.parent = transform;
-            rootNode2.transform.localPosition = Vector3.zero;
-            rootNode2.transform.localRotation = Quaternion.identity;
-
-            // Start growing tree
-            startTime = Time.time;
-            endTime = startTime + growthDuration;
-            isGrowing = true;
-
-
-            *//*// Grow tree recursively
-            GrowTree2(rootNode);*//*
-        }
-
-        if (Time.time == 16.0)
-        {
-            Destroy(rootNode2);
-            rootNode3 = Instantiate(treePrefab3);
-            rootNode3.transform.parent = transform;
-            rootNode3.transform.localPosition = Vector3.zero;
-            rootNode3.transform.localRotation = Quaternion.identity;
-
-            // Start growing tree
-            startTime = Time.time;
-            endTime = startTime + growthDuration;
-            isGrowing = true;*/
-
-
-            /*public void GrowTree2(GameObject parent)
-            {
-                // Add child nodes to parent node
-                // Calculate position and rotation of each new node
-                // Attach tree mesh and set texture of each node
-
-                // Recursively call GrowTree on each child node
-                foreach (Transform child in parent.transform)
-                {
-                    GrowTree2(child.gameObject);
-                }
-            }
-            */
 
 
     public void Update()
