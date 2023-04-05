@@ -11,9 +11,9 @@ public class SpawnGarden : MonoBehaviour
     public ARSessionOrigin sessionCamera;
     public GameObject playerPrefab;
 
-    public float[,] positions = new float[,]{ { 0, 0, 1 }, {2.4f,0,1 },{0,0,3.4f }, { 2.4f, 0, 3.4f} };
-    public float[,] cameraPositions = new float[,] { { 0, 2, 0 }, { 2.4f, 2, 0 }, { 0, 2, 2.4f }, { 2.4f, 2, 2.4f } };
-    public float[,] playerPositions = new float[,] { { 0, 0, 0 }, { 2.4f, 0, 0 }, { 0, 0, 2.4f }, { 2.4f, 0, 2.4f } };
+    public float[,] positions = new float[,]{ { 0, 0, 2 }, {4.4f,0,2 },{0,0,5.4f }, { 4.4f, 0, 5.4f} };
+    public float[,] cameraPositions = new float[,] { { 0, 2, 0 }, { 4.4f, 2, 0 }, { 0, 2, 4.4f }, { 4.4f, 2, 4.4f } };
+    public float[,] playerPositions = new float[,] { { 0, 0, 0 }, { 4.4f, 0, 0 }, { 0, 0, 4.4f }, { 4.4f, 0, 4.4f } };
 
     private GameObject playerObject;
 
