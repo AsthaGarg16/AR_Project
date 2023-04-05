@@ -3586,7 +3586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f64bfaba098924caf093d081a7f699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gardenPrefab: {fileID: 2721143883945893933, guid: cc1e20a2d07d048498e08ae4d63d98eb,
+  gardenPrefab: {fileID: 3158375044265235284, guid: 3d60367959115a740b3f0d74b0dd75f8,
     type: 3}
   sessionCamera: {fileID: 680505491}
   playerPrefab: {fileID: 4700562526707519537, guid: 715be8a074e843e4d81b91c69f1e47e2,
