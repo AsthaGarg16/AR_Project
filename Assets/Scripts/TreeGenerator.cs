@@ -64,18 +64,18 @@ public class TreeGenerator : MonoBehaviour
 
             if (select_tree == 1)
             {
-                rootNode2 = Instantiate(treePrefab2);
-                rootNode2.transform.parent = transform;
-                rootNode2.transform.localPosition = Vector3.zero;
-                rootNode2.transform.localRotation = Quaternion.identity;
+                rootNode = Instantiate(treePrefab);
+                rootNode.transform.parent = transform;
+                rootNode.transform.localPosition = Vector3.zero;
+                rootNode.transform.localRotation = Quaternion.identity;
             }
             //add another select_tree == 2
             if (select_tree == 2)
             {
-                rootNode3 = Instantiate(treePrefab2);
-                rootNode3.transform.parent = transform;
-                rootNode3.transform.localPosition = Vector3.zero;
-                rootNode3.transform.localRotation = Quaternion.identity;
+                rootNode = Instantiate(treePrefab);
+                rootNode.transform.parent = transform;
+                rootNode.transform.localPosition = Vector3.zero;
+                rootNode.transform.localRotation = Quaternion.identity;
             }
         }
 
@@ -101,6 +101,8 @@ public class TreeGenerator : MonoBehaviour
                 if (select_tree == 1)
                 {
                 //Object.Destroy(transform.GetChild(0));
+                    Object.Destroy(transform.GetChild(0).gameObject);
+
                     rootNode2 = Instantiate(treePrefab2);
                     rootNode2.transform.parent = transform;
                     rootNode2.transform.localPosition = Vector3.zero;
@@ -109,16 +111,48 @@ public class TreeGenerator : MonoBehaviour
                 //add another select_tree == 2
                 if (select_tree == 2)
                 {
-                    rootNode3 = Instantiate(treePrefab2);
-                    rootNode3.transform.parent = transform;
-                    rootNode3.transform.localPosition = Vector3.zero;
-                    rootNode3.transform.localRotation = Quaternion.identity;
+                    rootNode2 = Instantiate(treePrefab2);
+                    rootNode2.transform.parent = transform;
+                    rootNode2.transform.localPosition = Vector3.zero;
+                    rootNode2.transform.localRotation = Quaternion.identity;
                 }
         }
 
+        if (tree1 & tree2 & tree3)
+        {
+            if (select_tree == 0)
+            {
+                Object.Destroy(transform.GetChild(0).gameObject);
+                rootNode3 = Instantiate(treePrefab3);
+                rootNode3.transform.parent = transform;
+                rootNode3.transform.localPosition = Vector3.zero;
+                rootNode3.transform.localRotation = Quaternion.identity;
+            }
+            /*rootNode = Instantiate(treePrefab);
+            rootNode.transform.parent = transform;
+            rootNode.transform.localPosition = Vector3.zero;
+            rootNode.transform.localRotation = Quaternion.identity;*/
 
-            // Start growing tree
-            startTime = Time.time;
+            if (select_tree == 1)
+            {
+                rootNode3 = Instantiate(treePrefab2);
+                rootNode3.transform.parent = transform;
+                rootNode3.transform.localPosition = Vector3.zero;
+                rootNode3.transform.localRotation = Quaternion.identity;
+            }
+            //add another select_tree == 2
+            if (select_tree == 2)
+            {
+                rootNode3 = Instantiate(treePrefab2);
+                rootNode3.transform.parent = transform;
+                rootNode3.transform.localPosition = Vector3.zero;
+                rootNode3.transform.localRotation = Quaternion.identity;
+            }
+        }
+
+
+        // Start growing tree
+        startTime = Time.time;
             endTime = startTime + growthDuration;
             isGrowing = true;
 
@@ -158,7 +192,14 @@ public class TreeGenerator : MonoBehaviour
 */
             if (elapsed >= 8.0)
             {
-                
+                if (tree2 == true)
+                {
+                    isGrowing = false;
+                    tree3 = true;
+                    GenerateTree2();
+
+                }
+
                 if(tree1 == true)
                 {
                     //DestroyImmediate(treePrefab,true);
@@ -167,17 +208,6 @@ public class TreeGenerator : MonoBehaviour
                     GenerateTree2();
 
                 }
-
-                //Add for the 3rd type of tree
-
-                /*if (tree2 == true)
-                {
-                    isGrowing = false;
-                    tree3 = true;
-                    GenerateTree2();
-
-                }*/
-
 
 
             }
