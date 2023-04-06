@@ -21328,26 +21328,42 @@ struct TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab2_5;
 	// UnityEngine.GameObject TreeGenerator::treePrefab3
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab3_6;
+	// UnityEngine.GameObject TreeGenerator::treePrefab4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab4_7;
+	// UnityEngine.GameObject TreeGenerator::treePrefab5
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab5_8;
+	// UnityEngine.GameObject TreeGenerator::treePrefab6
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab6_9;
+	// UnityEngine.GameObject TreeGenerator::treePrefab7
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab7_10;
+	// UnityEngine.GameObject TreeGenerator::treePrefab8
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab8_11;
+	// UnityEngine.GameObject TreeGenerator::treePrefab9
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab9_12;
 	// UnityEngine.Texture TreeGenerator::treeTexture
-	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___treeTexture_7;
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___treeTexture_13;
 	// System.Single TreeGenerator::growthRate
-	float ___growthRate_8;
+	float ___growthRate_14;
 	// System.Single TreeGenerator::growthDuration
-	float ___growthDuration_9;
+	float ___growthDuration_15;
 	// System.Int32 TreeGenerator::select_tree
-	int32_t ___select_tree_10;
+	int32_t ___select_tree_16;
 	// System.Boolean TreeGenerator::tree1
-	bool ___tree1_11;
+	bool ___tree1_17;
 	// System.Boolean TreeGenerator::tree2
-	bool ___tree2_12;
+	bool ___tree2_18;
 	// System.Boolean TreeGenerator::tree3
-	bool ___tree3_13;
+	bool ___tree3_19;
 	// System.Single TreeGenerator::startTime
-	float ___startTime_14;
+	float ___startTime_20;
 	// System.Single TreeGenerator::endTime
-	float ___endTime_15;
+	float ___endTime_21;
 	// System.Boolean TreeGenerator::isGrowing
-	bool ___isGrowing_16;
+	bool ___isGrowing_22;
+	// System.Single[,] TreeGenerator::positions
+	SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* ___positions_23;
+	// System.Int32 TreeGenerator::count
+	int32_t ___count_24;
 };
 
 // UIManager
@@ -27276,12 +27292,14 @@ struct AsyncTaskMethodBuilder_1_t05B41371EF0E362ABCB54C56063FAA1E00C69A8F_Static
 // <PrivateImplementationDetails>
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::27A901D56F298E06C433829C3EC8A82230C50C1CF262B4F930A88C9C76DE5D07
-	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___27A901D56F298E06C433829C3EC8A82230C50C1CF262B4F930A88C9C76DE5D07_0;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::4F9457D9F6B21A86334F42580FFC66BE1B28BCD5B859D12C1D7A8A126AD69432
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___4F9457D9F6B21A86334F42580FFC66BE1B28BCD5B859D12C1D7A8A126AD69432_0;
 	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::824DF6D074609A7AE1093BB31093E9D7647D66F6040F493F508FA133EFF7B749
 	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___824DF6D074609A7AE1093BB31093E9D7647D66F6040F493F508FA133EFF7B749_1;
-	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::D20A9C497B72DA54A00ABD40F7FB1697DFB3FB34033B360F8E4FF88D0B9CA886
-	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___D20A9C497B72DA54A00ABD40F7FB1697DFB3FB34033B360F8E4FF88D0B9CA886_2;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::CDF1D01D45A2AABF0841F8E9BCE54EE0E50CB7D529FA5E92FFFF34C0E1D5E055
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___CDF1D01D45A2AABF0841F8E9BCE54EE0E50CB7D529FA5E92FFFF34C0E1D5E055_2;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::F3045A92EE52913159073F9F2308AF7227684D2E6037F47434CFAF69C8551148
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___F3045A92EE52913159073F9F2308AF7227684D2E6037F47434CFAF69C8551148_3;
 };
 
 // <PrivateImplementationDetails>
@@ -32847,9 +32865,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6754[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6755[5] = 
 {
 	static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___timerText_4)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___currentTime_5)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___maxTime_6)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___options_7)),static_cast<int32_t>(offsetof(Timer_t2FE811324BD2C741B8D6EBC18E20230874E35A20, ___defaultbuttons_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6756[13] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6756[21] = 
 {
-	static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab_4)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab2_5)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab3_6)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treeTexture_7)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___growthRate_8)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___growthDuration_9)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___select_tree_10)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___tree1_11)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___tree2_12)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___tree3_13)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___startTime_14)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___endTime_15)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___isGrowing_16)),};
+	static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab_4)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab2_5)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab3_6)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab4_7)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab5_8)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab6_9)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab7_10)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab8_11)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treePrefab9_12)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___treeTexture_13)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___growthRate_14)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___growthDuration_15)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___select_tree_16)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___tree1_17)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___tree2_18)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___tree3_19)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___startTime_20)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___endTime_21)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___isGrowing_22)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___positions_23)),static_cast<int32_t>(offsetof(TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD, ___count_24)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6758[2] = 
 {
 	static_cast<int32_t>(offsetof(UIManager_t16825A2483574F37D7D47AB939A6FA639678B1F3, ___Rooms_4)),static_cast<int32_t>(offsetof(UIManager_t16825A2483574F37D7D47AB939A6FA639678B1F3, ___Profile_5)),};
@@ -33057,9 +33075,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6837[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6838[7] = 
 {
 	static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ___toggle_4)),static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ____text_5)),static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ___NormalOnColor_6)),static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ___NormalOffColor_7)),static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ___HoverOnColor_8)),static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ___HoverOffColor_9)),static_cast<int32_t>(offsetof(TextToggleIsOnTransition_t25E8D7BA67F7318825A2DD34955FDA1A4FCC6B9A, ___isHover_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6840[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6840[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___27A901D56F298E06C433829C3EC8A82230C50C1CF262B4F930A88C9C76DE5D07_0)),static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___824DF6D074609A7AE1093BB31093E9D7647D66F6040F493F508FA133EFF7B749_1)),static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___D20A9C497B72DA54A00ABD40F7FB1697DFB3FB34033B360F8E4FF88D0B9CA886_2)),};
+	static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___4F9457D9F6B21A86334F42580FFC66BE1B28BCD5B859D12C1D7A8A126AD69432_0)),static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___824DF6D074609A7AE1093BB31093E9D7647D66F6040F493F508FA133EFF7B749_1)),static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___CDF1D01D45A2AABF0841F8E9BCE54EE0E50CB7D529FA5E92FFFF34C0E1D5E055_2)),static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields, ___F3045A92EE52913159073F9F2308AF7227684D2E6037F47434CFAF69C8551148_3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6844[11] = 
 {
 	static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___minWidth_0)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___maxWidth_1)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___minHeight_2)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___maxHeight_3)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___rect_4)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___stretchWidth_5)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___stretchHeight_6)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___consideredForMargin_7)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F, ___m_Style_8)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F_StaticFields, ___kDummyRect_9)),static_cast<int32_t>(offsetof(GUILayoutEntry_tDF59F19DD000820F64B356D5092C4BEDFE109D5F_StaticFields, ___indent_10)),};

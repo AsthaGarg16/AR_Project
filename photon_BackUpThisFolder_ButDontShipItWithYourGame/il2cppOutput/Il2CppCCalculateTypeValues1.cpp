@@ -32213,26 +32213,42 @@ struct TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab2_5;
 	// UnityEngine.GameObject TreeGenerator::treePrefab3
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab3_6;
+	// UnityEngine.GameObject TreeGenerator::treePrefab4
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab4_7;
+	// UnityEngine.GameObject TreeGenerator::treePrefab5
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab5_8;
+	// UnityEngine.GameObject TreeGenerator::treePrefab6
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab6_9;
+	// UnityEngine.GameObject TreeGenerator::treePrefab7
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab7_10;
+	// UnityEngine.GameObject TreeGenerator::treePrefab8
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab8_11;
+	// UnityEngine.GameObject TreeGenerator::treePrefab9
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___treePrefab9_12;
 	// UnityEngine.Texture TreeGenerator::treeTexture
-	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___treeTexture_7;
+	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___treeTexture_13;
 	// System.Single TreeGenerator::growthRate
-	float ___growthRate_8;
+	float ___growthRate_14;
 	// System.Single TreeGenerator::growthDuration
-	float ___growthDuration_9;
+	float ___growthDuration_15;
 	// System.Int32 TreeGenerator::select_tree
-	int32_t ___select_tree_10;
+	int32_t ___select_tree_16;
 	// System.Boolean TreeGenerator::tree1
-	bool ___tree1_11;
+	bool ___tree1_17;
 	// System.Boolean TreeGenerator::tree2
-	bool ___tree2_12;
+	bool ___tree2_18;
 	// System.Boolean TreeGenerator::tree3
-	bool ___tree3_13;
+	bool ___tree3_19;
 	// System.Single TreeGenerator::startTime
-	float ___startTime_14;
+	float ___startTime_20;
 	// System.Single TreeGenerator::endTime
-	float ___endTime_15;
+	float ___endTime_21;
 	// System.Boolean TreeGenerator::isGrowing
-	bool ___isGrowing_16;
+	bool ___isGrowing_22;
+	// System.Single[,] TreeGenerator::positions
+	SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* ___positions_23;
+	// System.Int32 TreeGenerator::count
+	int32_t ___count_24;
 };
 
 // TreeManager
@@ -42022,12 +42038,14 @@ struct AsyncTaskMethodBuilder_1_tE88892A6B2F97B5D44B7C3EE2DBEED85743412AC_Static
 // <PrivateImplementationDetails>
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::27A901D56F298E06C433829C3EC8A82230C50C1CF262B4F930A88C9C76DE5D07
-	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___27A901D56F298E06C433829C3EC8A82230C50C1CF262B4F930A88C9C76DE5D07_0;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::4F9457D9F6B21A86334F42580FFC66BE1B28BCD5B859D12C1D7A8A126AD69432
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___4F9457D9F6B21A86334F42580FFC66BE1B28BCD5B859D12C1D7A8A126AD69432_0;
 	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::824DF6D074609A7AE1093BB31093E9D7647D66F6040F493F508FA133EFF7B749
 	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___824DF6D074609A7AE1093BB31093E9D7647D66F6040F493F508FA133EFF7B749_1;
-	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::D20A9C497B72DA54A00ABD40F7FB1697DFB3FB34033B360F8E4FF88D0B9CA886
-	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___D20A9C497B72DA54A00ABD40F7FB1697DFB3FB34033B360F8E4FF88D0B9CA886_2;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::CDF1D01D45A2AABF0841F8E9BCE54EE0E50CB7D529FA5E92FFFF34C0E1D5E055
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___CDF1D01D45A2AABF0841F8E9BCE54EE0E50CB7D529FA5E92FFFF34C0E1D5E055_2;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::F3045A92EE52913159073F9F2308AF7227684D2E6037F47434CFAF69C8551148
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___F3045A92EE52913159073F9F2308AF7227684D2E6037F47434CFAF69C8551148_3;
 };
 
 // <PrivateImplementationDetails>
