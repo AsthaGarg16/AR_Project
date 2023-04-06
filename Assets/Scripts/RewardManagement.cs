@@ -97,7 +97,7 @@ public class RewardManagement : MonoBehaviour
     }
     public void storetree(int treeID){
 	if (bought == true){
-		PlayerPrefs.SetInt("tree",3);
+		PlayerPrefs.SetInt("tree",treeID);
 		bought =  false;
 	}
     }
