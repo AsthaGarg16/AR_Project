@@ -22,6 +22,7 @@ public class SpawnGarden : MonoBehaviour
     {
 
         int gardenIndex = (int)PhotonNetwork.CurrentRoom.CustomProperties["GardenIndex"];
+        PlayerPrefs.SetInt("PlayerIndex",gardenIndex);
         Vector3 position = new Vector3(positions[gardenIndex,0], positions[gardenIndex,1], positions[gardenIndex,2]);
         Vector3 cameraPosition = new Vector3(cameraPositions[gardenIndex, 0], cameraPositions[gardenIndex, 1], cameraPositions[gardenIndex, 2]);
         Vector3 playerPosition = new Vector3(playerPositions[gardenIndex, 0], playerPositions[gardenIndex, 1], playerPositions[gardenIndex, 2]);
