@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayAudio : MonoBehaviour
 {
     public AudioSource audioSource;
-    void PlayMusic()
+    public void PlayMusic()
     {
         audioSource.Play();
     }
 
-    void StopMusic()
+    public void StopMusic()
     {
         audioSource.Stop();
     }
