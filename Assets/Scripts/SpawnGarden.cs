@@ -12,8 +12,10 @@ public class SpawnGarden : MonoBehaviour
     public GameObject playerPrefab;
 
     public float[,] positions = new float[,]{ { 0, 0, 2 }, {5,0,2 },{0,0,7 }, {5, 0, 7} };
-    public float[,] cameraPositions = new float[,] { { 0, 2, 0 }, {5, 2, 0 }, { 0, 2, 5 }, { 5, 2, 5 } };
+    public float[,] cameraPositions = new float[,] { { 0, 1.5f, 0 }, {5, 1.5f, 0 }, { 0, 1.5f, 5 }, { 5, 1.5f, 5 } };
     public float[,] playerPositions = new float[,] { { 0, 0, 0 }, { 5, 0, 0 }, { 0, 0, 5 }, { 5, 0, 5 } };
+
+    public Vector3 offset = new Vector3(0, -0.5f, 0.5f);
 
     private GameObject playerObject;
 
@@ -33,10 +35,6 @@ public class SpawnGarden : MonoBehaviour
         sessionCamera.transform.position = cameraPosition;
        
         playerObject = PhotonNetwork.Instantiate(playerPrefab.name, playerPosition, Quaternion.identity);
-        playerObject.layer = LayerMask.NameToLayer("RemotePlayer");
-        // Set the culling mask of the local player's camera to not render the layer assigned to the player object
-        Camera.main.cullingMask &= ~(1 << LayerMask.NameToLayer("RemotePlayer"));
-        Debug.Log("Instantiating player at " + playerPosition);
         
         ExitGames.Client.Photon.Hashtable roomProps = PhotonNetwork.CurrentRoom.CustomProperties;
         roomProps["GardenIndex"] = gardenIndex + 1;
@@ -48,7 +46,7 @@ public class SpawnGarden : MonoBehaviour
     {
 
         // Update the position and rotation of the player object based on the ARSessionOrigin's transform
-        playerObject.transform.position = sessionCamera.transform.position;
+        playerObject.transform.position = sessionCamera.transform.position + offset;
         playerObject.transform.rotation = sessionCamera.transform.rotation;
     }
 }

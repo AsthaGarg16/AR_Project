@@ -28,8 +28,8 @@ public class RewardManagement : MonoBehaviour
 	  PlayerPrefs.SetInt("axes", 0);
 	  PlayerPrefs.SetInt("coins", 0);
 	  PlayerPrefs.SetInt("tree", 0);
-        AxeDisplay.text = "Axes: 0";
-	  CoinsDisplay.text = "Coins: 0";	
+        AxeDisplay.text = "0";
+	  CoinsDisplay.text = "0";	
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class RewardManagement : MonoBehaviour
     public void selectAxeReward(){
 	axes = PlayerPrefs.GetInt("axes");
 	axes+=1;
-	AxeDisplay.text = "Axes: "+axes.ToString();
+	AxeDisplay.text = axes.ToString();
 	PlayerPrefs.SetInt("axes", axes);
 	options.gameObject.SetActive(false);
 	defaultbuttons.gameObject.SetActive(true);
@@ -49,7 +49,7 @@ public class RewardManagement : MonoBehaviour
     public void selectCoinReward(){
 	coins = PlayerPrefs.GetInt("coins");
 	coins+=10;
-	CoinsDisplay.text = "Coins: "+coins.ToString();
+	CoinsDisplay.text = coins.ToString();
 	PlayerPrefs.SetInt("coins", coins);
 	options.gameObject.SetActive(false);
 	defaultbuttons.gameObject.SetActive(true);
@@ -61,7 +61,7 @@ public class RewardManagement : MonoBehaviour
 		axes = axes - 1;
 		PlayerPrefs.SetInt("axes",axes);
 		axes= PlayerPrefs.GetInt("axes");
-		AxeDisplay.text = "Axes: "+axes.ToString();
+		AxeDisplay.text = axes.ToString();
 		//photon tie in to remove the tree
 	}
 	else{
@@ -92,7 +92,7 @@ public class RewardManagement : MonoBehaviour
 		buyingpanel.gameObject.SetActive(false);
 		mainPanel.gameObject.SetActive(true);
 		coins= PlayerPrefs.GetInt("coins");
-		CoinsDisplay.text = "Coins: "+coins.ToString();
+		CoinsDisplay.text = coins.ToString();
 	}
     }
     public void storetree(int treeID){
