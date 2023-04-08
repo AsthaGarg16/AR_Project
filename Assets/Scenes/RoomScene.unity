@@ -2850,7 +2850,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997317249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: -200}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2869,20 +2869,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1360d597743ef9143a4b6fdf06868f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treePrefab: {fileID: 919132149155446097, guid: a83eca270fe43ef41afa276b84850112,
+  treePrefab: {fileID: 108507113624723981, guid: fd3ca06da9332a24e8836d6816f98369,
     type: 3}
-  treePrefab2: {fileID: 919132149155446097, guid: abe55baca90e40746a3ff4742f9147a2,
+  treePrefab2: {fileID: 6941765000743290380, guid: 1e5eb43c5120be847b0631a05656fc91,
     type: 3}
-  treePrefab3: {fileID: 0}
-  treePrefab4: {fileID: 0}
-  treePrefab5: {fileID: 0}
-  treePrefab6: {fileID: 0}
-  treePrefab7: {fileID: 0}
-  treePrefab8: {fileID: 0}
-  treePrefab9: {fileID: 0}
+  treePrefab3: {fileID: 6941765000743290380, guid: 1e5eb43c5120be847b0631a05656fc91,
+    type: 3}
+  treePrefab4: {fileID: 108507113624723981, guid: c1b9be8205ab417498380cf8294cb549,
+    type: 3}
+  treePrefab5: {fileID: 2222111361404534124, guid: 730b11768704e16448b423fd53a743bd,
+    type: 3}
+  treePrefab6: {fileID: 2807449429036958551, guid: 60856372e080e3642aea4afe0792dc9f,
+    type: 3}
+  treePrefab7: {fileID: 108507113624723981, guid: dffe840b4ede4ad4282c5f74b0a8469f,
+    type: 3}
+  treePrefab8: {fileID: 9069115365609291303, guid: 1446272f4029fb249894df2788e57c6f,
+    type: 3}
+  treePrefab9: {fileID: 4661435515762455780, guid: 5937bf98bbe663d40be82688d9a09e27,
+    type: 3}
   treeTexture: {fileID: 0}
   growthRate: 0.1
-  growthDuration: 25
+  growthDuration: 10
   select_tree: 0
   tree1: 0
   tree2: 0

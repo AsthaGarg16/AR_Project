@@ -60,7 +60,7 @@ public class TreeGenerator : MonoBehaviour
         tree1 = true;
         Debug.Log(tree2);
         int index = PlayerPrefs.GetInt("PlayerIndex");
-        Vector3 position = new Vector3(positions[index, 0] + count * 5, positions[index, 1], positions[index, 2]);
+        Vector3 position = new Vector3(positions[index, 0] + count * 2.5, positions[index, 1], positions[index, 2]);
         Debug.Log(index);
         Debug.Log(position);
 
@@ -259,6 +259,8 @@ public class TreeGenerator : MonoBehaviour
 
     }
 }
+
+    
 
     
 
