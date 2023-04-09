@@ -23,6 +23,10 @@ public class TreeGenerator : MonoBehaviour
     public GameObject treePrefab7;
     public GameObject treePrefab8;
     public GameObject treePrefab9;
+    public GameObject treePrefab10;
+    public GameObject treePrefab11;
+    public GameObject treePrefab12;
+
     public Texture treeTexture;
     public float growthRate;
     public float growthDuration;
@@ -60,7 +64,7 @@ public class TreeGenerator : MonoBehaviour
         tree1 = true;
         Debug.Log(tree2);
         int index = PlayerPrefs.GetInt("PlayerIndex");
-        Vector3 position = new Vector3(positions[index, 0] + count * 2.5, positions[index, 1], positions[index, 2]);
+        Vector3 position = new Vector3((float) (positions[index, 0] + count * 2.5), positions[index, 1], positions[index, 2]);
         Debug.Log(index);
         Debug.Log(position);
 
@@ -106,6 +110,13 @@ public class TreeGenerator : MonoBehaviour
                 rootNode.transform.localPosition = position;
                 rootNode.transform.localRotation = Quaternion.identity;
             }
+            if (select_tree == 3)
+            {
+                rootNode = Instantiate(treePrefab10);
+                rootNode.transform.parent = transform;
+                rootNode.transform.localPosition = position;
+                rootNode.transform.localRotation = Quaternion.identity;
+            }
         }
 
         if (tree1 & tree2 & !tree3)
@@ -142,6 +153,13 @@ public class TreeGenerator : MonoBehaviour
                 rootNode2.transform.localPosition = position;
                 rootNode2.transform.localRotation = Quaternion.identity;
             }
+            if (select_tree == 3)
+            {
+                rootNode = Instantiate(treePrefab11);
+                rootNode.transform.parent = transform;
+                rootNode.transform.localPosition = position;
+                rootNode.transform.localRotation = Quaternion.identity;
+            }
         }
 
         if (tree1 & tree2 & tree3)
@@ -153,6 +171,8 @@ public class TreeGenerator : MonoBehaviour
                 Debug.Log("Hi");
 
                 rootNode3 = Instantiate(treePrefab3);
+                Color newColor = new Color(0.74f, 0.33f, 0.61f);
+                rootNode3.GetComponent<Renderer>().material.color = newColor;                
                 rootNode3.transform.parent = transform;
                 rootNode3.transform.localPosition = position;
                 rootNode3.transform.localRotation = Quaternion.identity;
@@ -176,6 +196,13 @@ public class TreeGenerator : MonoBehaviour
                 rootNode3.transform.parent = transform;
                 rootNode3.transform.localPosition = position;
                 rootNode3.transform.localRotation = Quaternion.identity;
+            }
+            if (select_tree == 3)
+            {
+                rootNode = Instantiate(treePrefab12);
+                rootNode.transform.parent = transform;
+                rootNode.transform.localPosition = position;
+                rootNode.transform.localRotation = Quaternion.identity;
             }
         }
 
@@ -216,6 +243,7 @@ public class TreeGenerator : MonoBehaviour
                 isGrowing = false;
                 return;
             }*/
+
 
             if (elapsed >= growthDuration/3)
             {
