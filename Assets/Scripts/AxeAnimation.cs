@@ -7,6 +7,7 @@ public class AxeAnimation : MonoBehaviour
     public GameObject axe; 
     GameObject axeNode = null;
     public float[,] positions = new float[,] { { 0, 2, 1 }, { 5, 2, 1 }, { 0, 2, 6 }, { 5, 2, 6 } };
+    private float startTime;
     /*public float tiltAngle = 90.0f;
     public float rotationSpeed = 10f;
     public float swingRate;*/
@@ -31,11 +32,9 @@ public class AxeAnimation : MonoBehaviour
     }
     public void controller()
     {
+        startTime = Time.time;
         axeNode.gameObject.SetActive(true);
-        /*if (Time.time >= 5.0f)
-        {
-            axeNode.gameObject.SetActive(false);
-        }*/
+        
     }
 
     // Update is called once per frame
@@ -54,5 +53,11 @@ public class AxeAnimation : MonoBehaviour
         axeNode.transform.Rotate(0f, rotationSpeed * swingSpeed, 0f);
         if (Time.time == 3.0f) { return; }*/
         /*axe.transform.Rotate(0f, 45f, 0f);*/
+
+        float elapsed = Time.time - startTime;
+        if (elapsed >= 5.0f)
+        {
+            axeNode.gameObject.SetActive(false);
+        }
     }
 }
