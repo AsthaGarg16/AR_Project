@@ -12,10 +12,10 @@ public class SpawnGarden : MonoBehaviour
     public GameObject playerPrefab;
 
     public float[,] positions = new float[,]{ { 0, 0, 2 }, {5,0,2 },{0,0,7 }, {5, 0, 7} };
-    public float[,] cameraPositions = new float[,] { { 0, 1.5f, 0 }, {5, 1.5f, 0 }, { 0, 1.5f, 5 }, { 5, 1.5f, 5 } };
+    public float[,] cameraPositions = new float[,] { { 0, 1.5f, -1f }, {5, 1.5f, -1f }, { 0, 1.5f, 4f }, { 5, 1.5f, 4f } };
     public float[,] playerPositions = new float[,] { { 0, 0, 0 }, { 5, 0, 0 }, { 0, 0, 5 }, { 5, 0, 5 } };
 
-    public Vector3 offset = new Vector3(0, -0.5f, 0.5f);
+    public Vector3 offset = new Vector3(0, -1.5f, 1);
 
     private GameObject playerObject;
 
