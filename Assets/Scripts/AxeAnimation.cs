@@ -5,7 +5,8 @@ using UnityEngine;
 public class AxeAnimation : MonoBehaviour
 {
     public GameObject axe; 
-    public float[,] positions = new float[,] { { 0, 1, 1 }, { 5, 1, 1 }, { 0, 1, 6 }, { 5, 1, 6 } };
+    GameObject axeNode = null;
+    public float[,] positions = new float[,] { { 0, 2, 1 }, { 5, 2, 1 }, { 0, 2, 6 }, { 5, 2, 6 } };
     /*public float tiltAngle = 90.0f;
     public float rotationSpeed = 10f;
     public float swingRate;*/
@@ -14,7 +15,7 @@ public class AxeAnimation : MonoBehaviour
     void Start()
     {
 
-        GameObject axeNode = null;
+        
         int index = PlayerPrefs.GetInt("PlayerIndex");
         Vector3 position = new Vector3((float)(positions[index, 0]), positions[index, 1], positions[index, 2]);
         axeNode = Instantiate(axe);
@@ -26,16 +27,15 @@ public class AxeAnimation : MonoBehaviour
 
         /*startTime = Time.time;
         endTime = startTime + growthDuration;*/
-        transform.Rotate(90f, 0, 0);
 
     }
     public void controller()
     {
-        axe.gameObject.SetActive(true);
-        if (Time.time == 5.0f)
+        axeNode.gameObject.SetActive(true);
+        /*if (Time.time >= 5.0f)
         {
-            axe.gameObject.SetActive(false);
-        }
+            axeNode.gameObject.SetActive(false);
+        }*/
     }
 
     // Update is called once per frame
