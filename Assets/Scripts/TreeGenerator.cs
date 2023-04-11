@@ -124,7 +124,7 @@ public class TreeGenerator : MonoBehaviour
 
         if (tree1 & tree2 & !tree3)
         {
-            Object.Destroy(transform.GetChild(count).gameObject);
+            Object.Destroy(rootNode);
             if (select_tree == 0)
             {
                 //Destroy(rootNode);
@@ -141,9 +141,9 @@ public class TreeGenerator : MonoBehaviour
             if (select_tree == 1)
             {
                 //Object.Destroy(transform.GetChild(0));
-                Object.Destroy(transform.GetChild(count).gameObject);
+                
 
-                rootNode = PhotonNetwork.Instantiate(treePrefab5.name, position, Quaternion.identity);
+                rootNode2 = PhotonNetwork.Instantiate(treePrefab5.name, position, Quaternion.identity);
                 /*rootNode2.transform.parent = transform;
                 rootNode2.transform.localPosition = position;
                 rootNode2.transform.localRotation = Quaternion.identity;*/
@@ -151,14 +151,14 @@ public class TreeGenerator : MonoBehaviour
             //add another select_tree == 2
             if (select_tree == 2)
             {
-                rootNode = PhotonNetwork.Instantiate(treePrefab8.name, position, Quaternion.identity);
+                rootNode2 = PhotonNetwork.Instantiate(treePrefab8.name, position, Quaternion.identity);
                 /*rootNode2.transform.parent = transform;
                 rootNode2.transform.localPosition = position;
                 rootNode2.transform.localRotation = Quaternion.identity;*/
             }
             if (select_tree == 3)
             {
-                rootNode = PhotonNetwork.Instantiate(treePrefab11.name, position, Quaternion.identity);
+                rootNode2 = PhotonNetwork.Instantiate(treePrefab11.name, position, Quaternion.identity);
                 /*rootNode.transform.parent = transform;
                 rootNode.transform.localPosition = position;
                 rootNode.transform.localRotation = Quaternion.identity;*/
@@ -167,13 +167,13 @@ public class TreeGenerator : MonoBehaviour
 
         if (tree1 & tree2 & tree3)
         {
-            Object.Destroy(transform.GetChild(count).gameObject);
+            Object.Destroy(rootNode2);
             Debug.Log("Hm");
             if (select_tree == 0)
             {
                 Debug.Log("Hi");
 
-                rootNode = PhotonNetwork.Instantiate(treePrefab3.name, position, Quaternion.identity);
+                rootNode3 = PhotonNetwork.Instantiate(treePrefab3.name, position, Quaternion.identity);
                 /*Color newColor = new Color(0.74f, 0.33f, 0.61f);
                 rootNode3.GetComponent<Renderer>().material.color = newColor; */
                 /*rootNode3.transform.parent = transform;
@@ -188,7 +188,7 @@ public class TreeGenerator : MonoBehaviour
 
             if (select_tree == 1)
             {
-                rootNode = PhotonNetwork.Instantiate(treePrefab6.name, position, Quaternion.identity);
+                rootNode3 = PhotonNetwork.Instantiate(treePrefab6.name, position, Quaternion.identity);
                 /*rootNode3.transform.parent = transform;
                 rootNode3.transform.localPosition = position;
                 rootNode3.transform.localRotation = Quaternion.identity;*/
@@ -196,14 +196,14 @@ public class TreeGenerator : MonoBehaviour
             //add another select_tree == 2
             if (select_tree == 2)
             {
-                rootNode = PhotonNetwork.Instantiate(treePrefab9.name, position, Quaternion.identity);
+                rootNode3 = PhotonNetwork.Instantiate(treePrefab9.name, position, Quaternion.identity);
                 /*rootNode3.transform.parent = transform;
                 rootNode3.transform.localPosition = position;
                 rootNode3.transform.localRotation = Quaternion.identity;*/
             }
             if (select_tree == 3)
             {
-                rootNode = PhotonNetwork.Instantiate(treePrefab12.name, position, Quaternion.identity);
+                rootNode3 = PhotonNetwork.Instantiate(treePrefab12.name, position, Quaternion.identity);
                 /*rootNode.transform.parent = transform;
                 rootNode.transform.localPosition = position;
                 rootNode.transform.localRotation = Quaternion.identity;*/
@@ -282,10 +282,28 @@ public class TreeGenerator : MonoBehaviour
 
             }
 
+            if (tree1 == true && tree2 != true)
+            {
+                float scaleFactor = growthRate * Time.deltaTime;
+                rootNode.transform.localScale += Vector3.one * scaleFactor;
+            }
 
-            // Grow the tree by scaling it up
+            if (tree2 == true)
+            {
+                float scaleFactor = growthRate * Time.deltaTime;
+                rootNode2.transform.localScale += Vector3.one * scaleFactor;
+            }
+
+            if (tree3 == true)
+            {
+                float scaleFactor = growthRate * Time.deltaTime;
+                rootNode3.transform.localScale += Vector3.one * scaleFactor;
+            }
+
+
+            /*// Grow the tree by scaling it up
             float scaleFactor = growthRate * Time.deltaTime;
-            transform.GetChild(count).localScale += Vector3.one * scaleFactor;
+            transform.GetChild(count).localScale += Vector3.one * scaleFactor;*/
         }
 
 
