@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 108507113621798413}
   - component: {fileID: 108507113622797517}
   - component: {fileID: 840579875832209995}
-  - component: {fileID: -6104042312198048714}
-  - component: {fileID: -7465591990597221851}
+  - component: {fileID: -440587356235147176}
+  - component: {fileID: -4210745189132269992}
   m_Layer: 0
-  m_Name: Default 0
+  m_Name: Option 3.1
   m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 768be665aba8b4e4aae7a973ae9616cf, type: 3}
---- !u!114 &-6104042312198048714
+--- !u!114 &-440587356235147176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &-7465591990597221851
+--- !u!114 &-4210745189132269992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -6104042312198048714}
+  - {fileID: -440587356235147176}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2214906059029563178}
   m_Layer: 0
   m_Name: Option 2.3
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -2769094033915489211}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
