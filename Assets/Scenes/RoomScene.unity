@@ -4803,11 +4803,11 @@ MonoBehaviour:
     type: 3}
   treePrefab9: {fileID: 4661435515762455780, guid: 5937bf98bbe663d40be82688d9a09e27,
     type: 3}
-  treePrefab10: {fileID: 108507113624723981, guid: e12b4fce2e1c5a844af4d142e998e4c0,
+  treePrefab10: {fileID: 108507113624723981, guid: 89b20518bc64eb9439c3aab5cfebd6f2,
     type: 3}
-  treePrefab11: {fileID: 919132149155446097, guid: 2903ae99f1258e3428e9a3ad6c70c814,
+  treePrefab11: {fileID: 9179632178041557490, guid: 21ae1872f2a778447b3e9edc23af1cd8,
     type: 3}
-  treePrefab12: {fileID: 919132149155446097, guid: 2903ae99f1258e3428e9a3ad6c70c814,
+  treePrefab12: {fileID: 1537549619130520272, guid: a62e21a0588c3764e9920f525493e9a1,
     type: 3}
   treeTexture: {fileID: 0}
   growthRate: 0.075

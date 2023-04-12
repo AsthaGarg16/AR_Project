@@ -87,6 +87,7 @@ public class TreeGenerator : MonoBehaviour
             {
                 Debug.Log(position);
                 rootNode = PhotonNetwork.Instantiate(treePrefab.name, position, Quaternion.identity); //Instantiate(treePrefab);
+                /*rootNode.tag = "Tree";*/
                 /*rootNode.transform.parent = transform;
                 rootNode.transform.localPosition = position;
                 rootNode.transform.localRotation = Quaternion.identity;*/
@@ -101,6 +102,7 @@ public class TreeGenerator : MonoBehaviour
             if (select_tree == 1)
             {
                 rootNode = PhotonNetwork.Instantiate(treePrefab4.name, position, Quaternion.identity);
+                /*rootNode.tag = "Tree";*/
                 /*rootNode.transform.parent = transform;
                 rootNode.transform.localPosition = position;
                 rootNode.transform.localRotation = Quaternion.identity;*/
@@ -131,6 +133,7 @@ public class TreeGenerator : MonoBehaviour
 
 
                 rootNode2 = PhotonNetwork.Instantiate(treePrefab2.name, position, Quaternion.identity);
+                /*rootNode2.tag = "Tree";*/
                 /*rootNode2.transform.parent = transform;
                 rootNode2.transform.localPosition = position;
                 rootNode2.transform.localRotation = Quaternion.identity;*/
@@ -174,6 +177,7 @@ public class TreeGenerator : MonoBehaviour
                 Debug.Log("Hi");
 
                 rootNode3 = PhotonNetwork.Instantiate(treePrefab3.name, position, Quaternion.identity);
+                /*rootNode3.tag = "Tree";*/
                 /*Color newColor = new Color(0.74f, 0.33f, 0.61f);
                 rootNode3.GetComponent<Renderer>().material.color = newColor; */
                 /*rootNode3.transform.parent = transform;
