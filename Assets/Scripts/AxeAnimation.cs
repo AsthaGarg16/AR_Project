@@ -8,6 +8,7 @@ public class AxeAnimation : MonoBehaviour
     GameObject axeNode = null;
     public float[,] positions = new float[,] { { 0, 2, 1 }, { 5, 2, 1 }, { 0, 2, 6 }, { 5, 2, 6 } };
     private float startTime;
+    private float Duration = 5.0f;
     /*public float tiltAngle = 90.0f;
     public float rotationSpeed = 10f;
     public float swingRate;*/
@@ -55,7 +56,7 @@ public class AxeAnimation : MonoBehaviour
         /*axe.transform.Rotate(0f, 45f, 0f);*/
 
         float elapsed = Time.time - startTime;
-        if (elapsed >= 5.0f)
+        if (elapsed >= Duration)
         {
             axeNode.gameObject.SetActive(false);
         }
