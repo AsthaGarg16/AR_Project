@@ -30334,6 +30334,8 @@ struct AxeAnimation_t492C2480DF49C2F4554E040127DFEE31B4EB403C  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___axeNode_5;
 	// System.Single[,] AxeAnimation::positions
 	SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* ___positions_6;
+	// System.Single AxeAnimation::startTime
+	float ___startTime_7;
 };
 
 // AxeSelection
@@ -32545,8 +32547,14 @@ struct TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD  : public MonoBeh
 	bool ___isGrowing_25;
 	// System.Single[,] TreeGenerator::positions
 	SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* ___positions_26;
+	// UnityEngine.GameObject TreeGenerator::rootNode
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rootNode_27;
+	// UnityEngine.GameObject TreeGenerator::rootNode2
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rootNode2_28;
+	// UnityEngine.GameObject TreeGenerator::rootNode3
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rootNode3_29;
 	// System.Int32 TreeGenerator::count
-	int32_t ___count_27;
+	int32_t ___count_30;
 };
 
 // TreeManager
