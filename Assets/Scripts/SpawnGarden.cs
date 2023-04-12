@@ -10,6 +10,8 @@ public class SpawnGarden : MonoBehaviour
     public GameObject gardenPrefab;
     public ARSessionOrigin sessionCamera;
     public GameObject playerPrefab;
+    public GameObject player2Prefab;
+    public GameObject tree;
 
     public float[,] positions = new float[,]{ { 0, 0, 2 }, {5,0,2 },{0,0,7 }, {5, 0, 7} };
     public float[,] cameraPositions = new float[,] { { 0, 1.6f, -0.4f }, {5, 1.6f, -1f }, { 0, 1.6f, 4f }, { 5, 1.6f, 4f } };
@@ -53,7 +55,7 @@ public class SpawnGarden : MonoBehaviour
         //    playerObject.transform.position = pos;
         //}
         // Update the position and rotation of the player object based on the ARSessionOrigin's transform
-        //playerObject.transform.position = sessionCamera.transform.position + offset;
-       // playerObject.transform.rotation = sessionCamera.transform.rotation;
+       playerObject.transform.position = sessionCamera.transform.position + offset;
+       playerObject.transform.rotation = sessionCamera.transform.rotation;
     }
 }

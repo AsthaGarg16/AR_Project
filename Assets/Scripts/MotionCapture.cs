@@ -13,7 +13,7 @@ public class MotionCapture : MonoBehaviour
     //string jsonString = File.ReadAllText(Application.dataPath + "/test.txt");
 
    // [SerializeField] private Transform Neck;
-    /*
+    
     //For Body Pose2DLandmarks and Pose3DLandmarks
     [SerializeField] private Transform J_Bip_C_Neck;
     [SerializeField] private Transform J_Bip_C_Hips;
@@ -27,7 +27,7 @@ public class MotionCapture : MonoBehaviour
     [SerializeField] private Transform J_Bip_R_LowerLeg;
     [SerializeField] private Transform J_Bip_L_UpperLeg;
     [SerializeField] private Transform J_Bip_L_LowerLeg;
-
+    /*
     //For Left Fingers
      [SerializeField] private Transform LeftHand;
      [SerializeField] private Transform LeftRingProximal;
@@ -66,10 +66,10 @@ public class MotionCapture : MonoBehaviour
 
     public void Awake(){
         //Body
-      // J_Bip_C_Neck = animator.GetBoneTransform(HumanBodyBones.Neck);
-    //    J_Bip_C_Hips = animator.GetBoneTransform(HumanBodyBones.Hips);
-    //    J_Bip_C_Chest= animator.GetBoneTransform(HumanBodyBones.Chest);
-    //    J_Bip_C_Spine=animator.GetBoneTransform(HumanBodyBones.Spine);
+       J_Bip_C_Neck = animator.GetBoneTransform(HumanBodyBones.Neck);
+        J_Bip_C_Hips = animator.GetBoneTransform(HumanBodyBones.Hips);
+        J_Bip_C_Chest= animator.GetBoneTransform(HumanBodyBones.Chest);
+        J_Bip_C_Spine=animator.GetBoneTransform(HumanBodyBones.Spine);
     //    J_Bip_R_UpperArm=animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
     //    J_Bip_R_LowerArm=animator.GetBoneTransform(HumanBodyBones.RightLowerArm);
     //    J_Bip_L_UpperArm=animator.GetBoneTransform(HumanBodyBones.LeftUpperArm);
@@ -156,7 +156,7 @@ public class MotionCapture : MonoBehaviour
         // Debug.Log("skinnedMeshRenderer 29: " + skinnedMeshRenderer.GetBlendShapeWeight(29));
         // Debug.Log("skinnedMeshRenderer 11: " + skinnedMeshRenderer.GetBlendShapeWeight(11));
     }
-    /*
+   
     public void UpdatePositions(string HipPosition)
     {
         // Parse the string into a JSONObject
@@ -168,69 +168,71 @@ public class MotionCapture : MonoBehaviour
         Debug.Log("PositionsUnityUpdate: " + J_Bip_C_Hips);
        // Debug.Log("Position Hips"+ animator.GetBoneTransform(HumanBodyBones.Hips).position);
     }
-
-    public void UpdateRotations(string BodyRotations){
-        // Parse the string into a JSONObject
-        JSONObject jsonObject = JSON.Parse(BodyRotations) as JSONObject;
-       //For Body
-        RotationQuaternionConversion("J_Bip_C_Neck",J_Bip_C_Neck, HumanBodyBones.Neck,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_C_Hips",J_Bip_C_Hips, HumanBodyBones.Hips,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_C_Chest",J_Bip_C_Chest, HumanBodyBones.Chest,0.25f,jsonObject);
-        RotationQuaternionConversion("J_Bip_C_Spine",J_Bip_C_Spine, HumanBodyBones.Spine,0.45f,jsonObject);
-        RotationQuaternionConversion("J_Bip_R_UpperArm",J_Bip_R_UpperArm, HumanBodyBones.RightUpperArm,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_R_LowerArm",J_Bip_R_LowerArm, HumanBodyBones.RightLowerArm,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_L_UpperArm",J_Bip_L_UpperArm, HumanBodyBones.LeftUpperArm,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_L_LowerArm",J_Bip_L_LowerArm, HumanBodyBones.LeftLowerArm,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_R_UpperLeg",J_Bip_R_UpperLeg, HumanBodyBones.RightUpperLeg,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_R_LowerLeg",J_Bip_R_LowerLeg, HumanBodyBones.RightLowerLeg,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_L_UpperLeg",J_Bip_L_UpperLeg, HumanBodyBones.LeftUpperLeg,0.7f,jsonObject);
-        RotationQuaternionConversion("J_Bip_L_LowerLeg",J_Bip_L_LowerLeg, HumanBodyBones.LeftLowerLeg,0.7f,jsonObject);
-
-        //For Left Fingers
-        RotationQuaternionConversion("LeftHand",LeftHand,HumanBodyBones.LeftHand,1,jsonObject);
-        RotationQuaternionConversion("LeftRingProximal",LeftRingProximal, HumanBodyBones.LeftRingProximal,1,jsonObject);
-        RotationQuaternionConversion("LeftRingIntermediate",LeftRingIntermediate, HumanBodyBones.LeftRingIntermediate,1,jsonObject);
-        RotationQuaternionConversion("LeftRingDistal",LeftRingDistal, HumanBodyBones.LeftRingDistal,1,jsonObject);
-        RotationQuaternionConversion("LeftIndexProximal",LeftIndexProximal, HumanBodyBones.LeftIndexProximal,1,jsonObject);
-        RotationQuaternionConversion("LeftIndexIntermediate",LeftIndexIntermediate, HumanBodyBones.LeftIndexIntermediate,1,jsonObject);
-        RotationQuaternionConversion("LeftIndexDistal",LeftIndexDistal, HumanBodyBones.LeftIndexDistal,1,jsonObject);
-        RotationQuaternionConversion("LeftMiddleProximal",LeftMiddleProximal, HumanBodyBones.LeftMiddleProximal,1,jsonObject);
-        RotationQuaternionConversion("LeftThumbProximal",LeftThumbProximal, HumanBodyBones.LeftThumbProximal,1,jsonObject);
-        RotationQuaternionConversion("LeftThumbIntermediate",LeftThumbIntermediate, HumanBodyBones.LeftThumbIntermediate,1,jsonObject);
-        RotationQuaternionConversion("LeftThumbDistal",LeftThumbDistal, HumanBodyBones.LeftThumbDistal,1,jsonObject);
-        RotationQuaternionConversion("LeftLittleProximal",LeftLittleProximal, HumanBodyBones.LeftLittleProximal,1,jsonObject);
-        RotationQuaternionConversion("LeftLittleIntermediate",LeftLittleIntermediate, HumanBodyBones.LeftLittleIntermediate,1,jsonObject);
-        RotationQuaternionConversion("LeftLittleDistal",LeftLittleDistal, HumanBodyBones.LeftLittleDistal,1,jsonObject);
-
-        //For Right Fingers
-        RotationQuaternionConversion("RightHand",RightHand,HumanBodyBones.RightHand,1,jsonObject);
-        RotationQuaternionConversion("RightRingProximal",RightRingProximal, HumanBodyBones.RightRingProximal,1,jsonObject);
-        RotationQuaternionConversion("RightRingIntermediate",RightRingIntermediate, HumanBodyBones.RightRingIntermediate,1,jsonObject);
-        RotationQuaternionConversion("RightRingDistal",RightRingDistal, HumanBodyBones.RightRingDistal,1,jsonObject);
-        RotationQuaternionConversion("RightIndexProximal",RightIndexProximal, HumanBodyBones.RightIndexProximal,1,jsonObject);
-        RotationQuaternionConversion("RightIndexIntermediate",RightIndexIntermediate, HumanBodyBones.RightIndexIntermediate,1,jsonObject);
-        RotationQuaternionConversion("RightIndexDistal",RightIndexDistal, HumanBodyBones.RightIndexDistal,1,jsonObject);
-        RotationQuaternionConversion("RightMiddleProximal",RightMiddleProximal, HumanBodyBones.RightMiddleProximal,1,jsonObject);
-        RotationQuaternionConversion("RightThumbProximal",RightThumbProximal, HumanBodyBones.RightThumbProximal,1,jsonObject);
-        RotationQuaternionConversion("RightThumbIntermediate",RightThumbIntermediate, HumanBodyBones.RightThumbIntermediate,1,jsonObject);
-        RotationQuaternionConversion("RightThumbDistal",RightThumbDistal, HumanBodyBones.RightThumbDistal,1,jsonObject);
-        RotationQuaternionConversion("RightLittleProximal",RightLittleProximal, HumanBodyBones.RightLittleProximal,1,jsonObject);
-        RotationQuaternionConversion("RightLittleIntermediate",RightLittleIntermediate, HumanBodyBones.RightLittleIntermediate,1,jsonObject);
-        RotationQuaternionConversion("RightLittleDistal",RightLittleDistal, HumanBodyBones.RightLittleDistal,1,jsonObject);
-    }
     
-  public void RotationQuaternionConversion(string jsonName, Transform bodyTransform, HumanBodyBones humanBodyBone, float dampener, JSONObject jsonObject){
-        Vector3 rotation = new Vector3(jsonObject[jsonName]["x"] *dampener, jsonObject[jsonName]["y"] *dampener,jsonObject[jsonName]["z"] *dampener);
-        Debug.Log("part 1"+jsonName+" " +rotation);
-        Quaternion quaternion = Quaternion.Euler(rotation);
-        Debug.Log("part 2 quaternion" + quaternion);
-        //humanBodyBone.Transform.rotation = Quaternion.Slerp(boneTransform.localRotation, quaternion, lerpAmount);      
-        // bodyTransform.rotation = Quaternion.Slerp(bodyTransform.rotation, quaternion, lerpAmount);
-        bodyTransform.rotation=quaternion;
-        Debug.Log("part 3" +bodyTransform.rotation);
-        // Set the new rotation using SetBoneLocalRotation
-        //animator.SetBoneLocalRotation(humanBodyBone, newRotation);
-       // Debug.Log("animator: rotation "+ animator.GetBoneTransform(humanBodyBone).rotation);
-     }
-    */
-}
+   public void UpdateRotations(string BodyRotations){
+       // Parse the string into a JSONObject
+       JSONObject jsonObject = JSON.Parse(BodyRotations) as JSONObject;
+      //For Body
+       RotationQuaternionConversion("J_Bip_C_Neck",J_Bip_C_Neck, HumanBodyBones.Neck,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_C_Hips",J_Bip_C_Hips, HumanBodyBones.Hips,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_C_Chest",J_Bip_C_Chest, HumanBodyBones.Chest,0.25f,jsonObject);
+       RotationQuaternionConversion("J_Bip_C_Spine",J_Bip_C_Spine, HumanBodyBones.Spine,0.45f,jsonObject);
+       RotationQuaternionConversion("J_Bip_R_UpperArm",J_Bip_R_UpperArm, HumanBodyBones.RightUpperArm,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_R_LowerArm",J_Bip_R_LowerArm, HumanBodyBones.RightLowerArm,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_L_UpperArm",J_Bip_L_UpperArm, HumanBodyBones.LeftUpperArm,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_L_LowerArm",J_Bip_L_LowerArm, HumanBodyBones.LeftLowerArm,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_R_UpperLeg",J_Bip_R_UpperLeg, HumanBodyBones.RightUpperLeg,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_R_LowerLeg",J_Bip_R_LowerLeg, HumanBodyBones.RightLowerLeg,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_L_UpperLeg",J_Bip_L_UpperLeg, HumanBodyBones.LeftUpperLeg,0.7f,jsonObject);
+       RotationQuaternionConversion("J_Bip_L_LowerLeg",J_Bip_L_LowerLeg, HumanBodyBones.LeftLowerLeg,0.7f,jsonObject);
+        /*
+       //For Left Fingers
+       RotationQuaternionConversion("LeftHand",LeftHand,HumanBodyBones.LeftHand,1,jsonObject);
+       RotationQuaternionConversion("LeftRingProximal",LeftRingProximal, HumanBodyBones.LeftRingProximal,1,jsonObject);
+       RotationQuaternionConversion("LeftRingIntermediate",LeftRingIntermediate, HumanBodyBones.LeftRingIntermediate,1,jsonObject);
+       RotationQuaternionConversion("LeftRingDistal",LeftRingDistal, HumanBodyBones.LeftRingDistal,1,jsonObject);
+       RotationQuaternionConversion("LeftIndexProximal",LeftIndexProximal, HumanBodyBones.LeftIndexProximal,1,jsonObject);
+       RotationQuaternionConversion("LeftIndexIntermediate",LeftIndexIntermediate, HumanBodyBones.LeftIndexIntermediate,1,jsonObject);
+       RotationQuaternionConversion("LeftIndexDistal",LeftIndexDistal, HumanBodyBones.LeftIndexDistal,1,jsonObject);
+       RotationQuaternionConversion("LeftMiddleProximal",LeftMiddleProximal, HumanBodyBones.LeftMiddleProximal,1,jsonObject);
+       RotationQuaternionConversion("LeftThumbProximal",LeftThumbProximal, HumanBodyBones.LeftThumbProximal,1,jsonObject);
+       RotationQuaternionConversion("LeftThumbIntermediate",LeftThumbIntermediate, HumanBodyBones.LeftThumbIntermediate,1,jsonObject);
+       RotationQuaternionConversion("LeftThumbDistal",LeftThumbDistal, HumanBodyBones.LeftThumbDistal,1,jsonObject);
+       RotationQuaternionConversion("LeftLittleProximal",LeftLittleProximal, HumanBodyBones.LeftLittleProximal,1,jsonObject);
+       RotationQuaternionConversion("LeftLittleIntermediate",LeftLittleIntermediate, HumanBodyBones.LeftLittleIntermediate,1,jsonObject);
+       RotationQuaternionConversion("LeftLittleDistal",LeftLittleDistal, HumanBodyBones.LeftLittleDistal,1,jsonObject);
+
+       //For Right Fingers
+       RotationQuaternionConversion("RightHand",RightHand,HumanBodyBones.RightHand,1,jsonObject);
+       RotationQuaternionConversion("RightRingProximal",RightRingProximal, HumanBodyBones.RightRingProximal,1,jsonObject);
+       RotationQuaternionConversion("RightRingIntermediate",RightRingIntermediate, HumanBodyBones.RightRingIntermediate,1,jsonObject);
+       RotationQuaternionConversion("RightRingDistal",RightRingDistal, HumanBodyBones.RightRingDistal,1,jsonObject);
+       RotationQuaternionConversion("RightIndexProximal",RightIndexProximal, HumanBodyBones.RightIndexProximal,1,jsonObject);
+       RotationQuaternionConversion("RightIndexIntermediate",RightIndexIntermediate, HumanBodyBones.RightIndexIntermediate,1,jsonObject);
+       RotationQuaternionConversion("RightIndexDistal",RightIndexDistal, HumanBodyBones.RightIndexDistal,1,jsonObject);
+       RotationQuaternionConversion("RightMiddleProximal",RightMiddleProximal, HumanBodyBones.RightMiddleProximal,1,jsonObject);
+       RotationQuaternionConversion("RightThumbProximal",RightThumbProximal, HumanBodyBones.RightThumbProximal,1,jsonObject);
+       RotationQuaternionConversion("RightThumbIntermediate",RightThumbIntermediate, HumanBodyBones.RightThumbIntermediate,1,jsonObject);
+       RotationQuaternionConversion("RightThumbDistal",RightThumbDistal, HumanBodyBones.RightThumbDistal,1,jsonObject);
+       RotationQuaternionConversion("RightLittleProximal",RightLittleProximal, HumanBodyBones.RightLittleProximal,1,jsonObject);
+       RotationQuaternionConversion("RightLittleIntermediate",RightLittleIntermediate, HumanBodyBones.RightLittleIntermediate,1,jsonObject);
+       RotationQuaternionConversion("RightLittleDistal",RightLittleDistal, HumanBodyBones.RightLittleDistal,1,jsonObject);
+  */
+        
+        }
+  
+ public void RotationQuaternionConversion(string jsonName, Transform bodyTransform, HumanBodyBones humanBodyBone, float dampener, JSONObject jsonObject){
+       Vector3 rotation = new Vector3(jsonObject[jsonName]["x"] *dampener, jsonObject[jsonName]["y"] *dampener,jsonObject[jsonName]["z"] *dampener);
+       Debug.Log("part 1"+jsonName+" " +rotation);
+       Quaternion quaternion = Quaternion.Euler(rotation);
+       Debug.Log("part 2 quaternion" + quaternion);
+       //humanBodyBone.Transform.rotation = Quaternion.Slerp(boneTransform.localRotation, quaternion, lerpAmount);      
+       // bodyTransform.rotation = Quaternion.Slerp(bodyTransform.rotation, quaternion, lerpAmount);
+       bodyTransform.rotation=quaternion;
+       Debug.Log("part 3" +bodyTransform.rotation);
+       // Set the new rotation using SetBoneLocalRotation
+       //animator.SetBoneLocalRotation(humanBodyBone, newRotation);
+      // Debug.Log("animator: rotation "+ animator.GetBoneTransform(humanBodyBone).rotation);
+    }
+
+    }

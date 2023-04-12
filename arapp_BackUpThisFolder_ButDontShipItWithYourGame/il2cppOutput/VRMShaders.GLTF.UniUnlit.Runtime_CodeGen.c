@@ -47,16 +47,16 @@ static Il2CppMethodPointer s_methodPointers[10] =
 };
 static const int32_t s_InvokerIndices[10] = 
 {
-	13014,
-	13014,
-	13014,
-	14119,
-	14119,
-	14119,
-	13011,
-	11665,
-	13014,
-	11676,
+	13015,
+	13015,
+	13015,
+	14120,
+	14120,
+	14120,
+	13012,
+	11666,
+	13015,
+	11677,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_VRMShaders_GLTF_UniUnlit_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_VRMShaders_GLTF_UniUnlit_Runtime_CodeGenModule = 

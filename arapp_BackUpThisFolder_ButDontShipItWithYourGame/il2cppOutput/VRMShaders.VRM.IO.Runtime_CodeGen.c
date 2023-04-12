@@ -34,10 +34,10 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 };
 static const int32_t s_InvokerIndices[4] = 
 {
-	15448,
-	15495,
-	3778,
-	8987,
+	15449,
+	15496,
+	3779,
+	8988,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_VRMShaders_VRM_IO_Runtime_CodeGenModule;
 const Il2CppCodeGenModule g_VRMShaders_VRM_IO_Runtime_CodeGenModule = 

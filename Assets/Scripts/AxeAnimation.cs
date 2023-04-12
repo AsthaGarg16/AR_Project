@@ -6,7 +6,7 @@ public class AxeAnimation : MonoBehaviour
 {
     public GameObject axe; 
     GameObject axeNode = null;
-    public float[,] positions = new float[,] { { 0, 2, 1 }, { 5, 2, 1 }, { 0, 2, 6 }, { 5, 2, 6 } };
+    public float[,] positions = new float[,] { { 4, 1, 1 }, { 5, 2, 1 }, { 0, 2, 6 }, { 5, 2, 6 } };
     private float startTime;
     private float Duration = 5.0f;
     /*public float tiltAngle = 90.0f;
