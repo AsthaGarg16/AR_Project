@@ -52,4 +52,11 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
         //switch scene
         SceneManager.LoadScene("RoomScene");
     }
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.LocalPlayer);
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("PhotonTrial");
+    }
 }

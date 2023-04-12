@@ -5070,7 +5070,6 @@ GameObject:
   - component: {fileID: 54624067976758846}
   - component: {fileID: 54624067976758847}
   - component: {fileID: 54624067976758819}
-  - component: {fileID: -271754213601265617}
   m_Layer: 0
   m_Name: avatar1
   m_TagString: Untagged
@@ -5422,7 +5421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
+  m_SynchronizeScale: 1
   m_UseLocal: 1
 --- !u!114 &54624067976758819
 MonoBehaviour:
@@ -5438,19 +5437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: {fileID: 7195230850229209843}
   animator: {fileID: 4851992796502112315}
---- !u!114 &-271754213601265617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7549947224817018972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee191c2b32df9b40836d2f13c154924, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
 --- !u!1 &7553567383218698522
 GameObject:
   m_ObjectHideFlags: 0
