@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
     public Text timerText;
     private float currentTime;
-    private float maxTime = 10.0f; // 25 minutes in seconds
+    private float maxTime = 1500.0f; // 25 minutes in seconds
     public GameObject options;
     public GameObject defaultbuttons;
 
