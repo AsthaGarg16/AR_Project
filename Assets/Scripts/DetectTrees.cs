@@ -17,10 +17,10 @@ public class DetectTrees : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Detect()
     {
         //add condition to check if 'chopping' is active
-        float distanceThreshold = 6.0f; // Distance threshold to trigger action
+        float distanceThreshold = 5.0f; // Distance threshold to trigger action
         GameObject[] treeObjects = GameObject.FindGameObjectsWithTag("Tree");
         Player currentPlayer = PhotonNetwork.LocalPlayer;
 
