@@ -36,6 +36,7 @@ public class DetectTrees : MonoBehaviour
                 {
                     PhotonView treeView = treeObject.GetComponent<PhotonView>();
                     treeOwnerActorId = treeView.OwnerActorNr;
+                    tree = treeView;
                     // Do something when the player gets close to a tree that belongs to another player
                     Debug.Log("Player is close to a tree that belongs to another player");
                     chopButton.SetActive(true);
