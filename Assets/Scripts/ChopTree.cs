@@ -26,9 +26,17 @@ public class ChopTree : MonoBehaviour
             PhotonView treeView = PhotonView.Find(treeViewId);
             if (treeView != null)
             {
-                PhotonNetwork.Destroy(treeView.gameObject);
+                //PhotonNetwork.Destroy(treeView.gameObject);
+                DelayedFunction2(treeView);
             }
         }
+    }
+
+    IEnumerator DelayedFunction2(PhotonView treeView)
+    {
+        yield return new WaitForSeconds(5);
+        // Code to execute after the delay
+        PhotonNetwork.Destroy(treeView.gameObject);
     }
     void Start()
     {

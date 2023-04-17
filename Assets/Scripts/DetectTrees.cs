@@ -8,6 +8,8 @@ using ExitGames.Client.Photon;
 public class DetectTrees : MonoBehaviour
 {
     private int treeOwnerActorId;
+    public GameObject chopButton;
+    private PhotonView tree;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,8 @@ public class DetectTrees : MonoBehaviour
     void Update()
     {
         //add condition to check if 'chopping' is active
-        float distanceThreshold = 3.0f; // Distance threshold to trigger action
-        GameObject[] treeObjects = GameObject.FindGameObjectsWithTag("tree");
+        float distanceThreshold = 6.0f; // Distance threshold to trigger action
+        GameObject[] treeObjects = GameObject.FindGameObjectsWithTag("Tree");
         Player currentPlayer = PhotonNetwork.LocalPlayer;
 
         foreach (GameObject treeObject in treeObjects)
@@ -36,19 +38,20 @@ public class DetectTrees : MonoBehaviour
                     treeOwnerActorId = treeView.OwnerActorNr;
                     // Do something when the player gets close to a tree that belongs to another player
                     Debug.Log("Player is close to a tree that belongs to another player");
-                    SendChopMessage(treeView);
+                    chopButton.SetActive(true);
+                    
                 }
             }
         }
     }
 
-    void SendChopMessage(PhotonView treeView)
+    public void SendChopMessage()
     {
         // Define an event code to represent the "chop" message
         const byte CHOP_MESSAGE = 1;
 
         // Define a custom data object to hold the tree object's ID
-        object[] data = new object[] { treeView.ViewID };
+        object[] data = new object[] { tree.ViewID };
 
         // Define the RaiseEventOptions to send the message to the owner of the tree object
         RaiseEventOptions options = new RaiseEventOptions();

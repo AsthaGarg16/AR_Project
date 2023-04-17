@@ -4785,11 +4785,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1360d597743ef9143a4b6fdf06868f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treePrefab: {fileID: 108507113624723981, guid: fd3ca06da9332a24e8836d6816f98369,
+  treePrefab: {fileID: 108507113624723981, guid: 89b20518bc64eb9439c3aab5cfebd6f2,
     type: 3}
-  treePrefab2: {fileID: 6941765000743290380, guid: 1e5eb43c5120be847b0631a05656fc91,
+  treePrefab2: {fileID: 9179632178041557490, guid: 21ae1872f2a778447b3e9edc23af1cd8,
     type: 3}
-  treePrefab3: {fileID: 6941765000743290380, guid: c253d8a815c3a4f4396df34b58f2d453,
+  treePrefab3: {fileID: 1537549619130520272, guid: a62e21a0588c3764e9920f525493e9a1,
     type: 3}
   treePrefab4: {fileID: 108507113624723981, guid: c1b9be8205ab417498380cf8294cb549,
     type: 3}
@@ -4810,7 +4810,7 @@ MonoBehaviour:
   treePrefab12: {fileID: 1537549619130520272, guid: a62e21a0588c3764e9920f525493e9a1,
     type: 3}
   treeTexture: {fileID: 0}
-  growthRate: 0.075
+  growthRate: 0.1
   growthDuration: 10
   select_tree: 0
   tree1: 0
@@ -6093,9 +6093,9 @@ MonoBehaviour:
   gardenPrefab: {fileID: 3158375044265235284, guid: 3d60367959115a740b3f0d74b0dd75f8,
     type: 3}
   sessionCamera: {fileID: 680505491}
-  playerPrefab: {fileID: 6015639071760475943, guid: 369214a9b26c1954a8ffa480c2bd4f75,
+  playerPrefab: {fileID: 7549947224817018972, guid: f90f67420d458344b91be5a45e7b4092,
     type: 3}
-  player2Prefab: {fileID: 7549947224817018972, guid: f90f67420d458344b91be5a45e7b4092,
+  player2Prefab: {fileID: 6015639071760475943, guid: 369214a9b26c1954a8ffa480c2bd4f75,
     type: 3}
   tree: {fileID: 4661435515762455780, guid: 5937bf98bbe663d40be82688d9a09e27, type: 3}
   offset: {x: 0, y: -0.5, z: 0.5}
@@ -6563,6 +6563,64 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1391926931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1422357016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422357019}
+  - component: {fileID: 1422357018}
+  - component: {fileID: 1422357017}
+  m_Layer: 0
+  m_Name: ChopChop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1422357017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422357016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f402b5b5a64544141a16446c7e326008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chopButton: {fileID: 1263394836561528274}
+--- !u!114 &1422357018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422357016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4872406a864c54c9942c651e78d72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1422357019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422357016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431216404
 GameObject:
   m_ObjectHideFlags: 0
@@ -10753,7 +10811,7 @@ PrefabInstance:
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
@@ -10769,17 +10827,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1958952778}
+      objectReference: {fileID: 1422357017}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1610012853}
+      objectReference: {fileID: 1958952778}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1610012853}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
@@ -10802,8 +10860,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendChopMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: chopfriendtree
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: hidebutton
+      value: controller
       objectReference: {fileID: 0}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
@@ -10817,8 +10885,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DetectTrees, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RewardManagement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: chopchop, Assembly-CSharp
+      value: AxeAnimation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2708441189078690054, guid: e0a5185d54f86c04ab77f9cce359132c,
         type: 3}
@@ -10947,6 +11025,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a5185d54f86c04ab77f9cce359132c, type: 3}
+--- !u!1 &1263394836561528274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2708441189078690048, guid: e0a5185d54f86c04ab77f9cce359132c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1263394836561528273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3755485325846277334 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2708441189078690055, guid: e0a5185d54f86c04ab77f9cce359132c,

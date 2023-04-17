@@ -618,6 +618,8 @@ struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 struct TreeGenerator_tA08462994F0260E0320A315275092555D593D4AD;
 // TreeManager
 struct TreeManager_tEA4C281FFB8B8428A91BDBDEFDBAABD79025FD43;
+// TreeOffset
+struct TreeOffset_t5F64120F339E46C00A0148F0BA400D4E7DCB3580;
 // System.Type
 struct Type_t;
 // Photon.Realtime.TypedLobby
@@ -5212,6 +5214,11 @@ struct TreeManager_tEA4C281FFB8B8428A91BDBDEFDBAABD79025FD43  : public MonoBehav
 {
 };
 
+// TreeOffset
+struct TreeOffset_t5F64120F339E46C00A0148F0BA400D4E7DCB3580  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
 // UnityEngine.EventSystems.UIBehaviour
 struct UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -7688,6 +7695,10 @@ struct TextMeshProFloatingText_t833773B79A4826E78EDF2799C157B0EC3ACACB31_StaticF
 // TreeManager
 
 // TreeManager
+
+// TreeOffset
+
+// TreeOffset
 
 // UnityEngine.EventSystems.UIBehaviour
 
@@ -13063,54 +13074,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnGarden_Start_m6E409478C5D36B1B35597
 		NullCheck(L_54);
 		bool L_56;
 		L_56 = VirtualFuncInvoker3< bool, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* >::Invoke(5 /* System.Boolean Photon.Realtime.Room::SetCustomProperties(ExitGames.Client.Photon.Hashtable,ExitGames.Client.Photon.Hashtable,Photon.Realtime.WebFlags) */, L_54, L_55, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL);
-		// PhotonNetwork.Instantiate(gardenPrefab.name, new Vector3(positions[1, 0], positions[1, 1], positions[1, 2]), Quaternion.identity);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_57 = __this->___gardenPrefab_4;
-		NullCheck(L_57);
-		String_t* L_58;
-		L_58 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_57, NULL);
-		SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* L_59 = __this->___positions_9;
-		NullCheck(L_59);
-		float L_60;
-		L_60 = (L_59)->GetAt(1, 0);
-		SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* L_61 = __this->___positions_9;
-		NullCheck(L_61);
-		float L_62;
-		L_62 = (L_61)->GetAt(1, 1);
-		SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* L_63 = __this->___positions_9;
-		NullCheck(L_63);
-		float L_64;
-		L_64 = (L_63)->GetAt(1, 2);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_65;
-		memset((&L_65), 0, sizeof(L_65));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_65), L_60, L_62, L_64, /*hidden argument*/NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_66;
-		L_66 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_67;
-		L_67 = PhotonNetwork_Instantiate_mD5714F5AC4C17B75AFD65676226351C91B60AF0D(L_58, L_65, L_66, (uint8_t)0, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL, NULL);
-		// PhotonNetwork.Instantiate(player2Prefab.name, new Vector3(playerPositions[1, 0], playerPositions[1, 1], playerPositions[1, 2]), Quaternion.identity);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_68 = __this->___player2Prefab_7;
-		NullCheck(L_68);
-		String_t* L_69;
-		L_69 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_68, NULL);
-		SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* L_70 = __this->___playerPositions_11;
-		NullCheck(L_70);
-		float L_71;
-		L_71 = (L_70)->GetAt(1, 0);
-		SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* L_72 = __this->___playerPositions_11;
-		NullCheck(L_72);
-		float L_73;
-		L_73 = (L_72)->GetAt(1, 1);
-		SingleU5BU2CU5D_t8C95DA2D5056EB0490FC7DCB1ED30E33DE1D53F4* L_74 = __this->___playerPositions_11;
-		NullCheck(L_74);
-		float L_75;
-		L_75 = (L_74)->GetAt(1, 2);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_76;
-		memset((&L_76), 0, sizeof(L_76));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_76), L_71, L_73, L_75, /*hidden argument*/NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_77;
-		L_77 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_78;
-		L_78 = PhotonNetwork_Instantiate_mD5714F5AC4C17B75AFD65676226351C91B60AF0D(L_69, L_76, L_77, (uint8_t)0, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL, NULL);
 		// }
 		return;
 	}
@@ -13119,20 +13082,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnGarden_Start_m6E409478C5D36B1B35597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnGarden_Update_mEFCE8A9C11AE2EA003DCD792362D5B0493D71B2B (SpawnGarden_t5854117367F4474771FAA1693EFBB4B59A3088EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// playerObject.transform.rotation = sessionCamera.transform.rotation;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___playerObject_13;
-		NullCheck(L_0);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
-		L_1 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_0, NULL);
-		ARSessionOrigin_tE7B28A1A19500BCC02711397A19E330425830BC3* L_2 = __this->___sessionCamera_5;
-		NullCheck(L_2);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
-		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_2, NULL);
-		NullCheck(L_3);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4;
-		L_4 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_3, NULL);
-		NullCheck(L_1);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_1, L_4, NULL);
 		// }
 		return;
 	}
@@ -13174,10 +13123,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnGarden__ctor_m64AA4C6933764A27F52FF
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_10, L_11, NULL);
 		__this->___playerPositions_11 = L_10;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerPositions_11), (void*)L_10);
-		// public Vector3 offset = new Vector3(0, -3.5f, 1);
+		// public Vector3 offset = new Vector3(0, -5, 1);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		memset((&L_12), 0, sizeof(L_12));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), (0.0f), (-3.5f), (1.0f), /*hidden argument*/NULL);
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), (0.0f), (-5.0f), (1.0f), /*hidden argument*/NULL);
 		__this->___offset_12 = L_12;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -14282,6 +14231,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TreeManager_Update_m37FE3424EF98A187C799
 }
 // System.Void TreeManager::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TreeManager__ctor_mE7597D6280974BE05A3E9F1C107B3CFB40A58A49 (TreeManager_tEA4C281FFB8B8428A91BDBDEFDBAABD79025FD43* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TreeOffset::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TreeOffset_Start_m2165843B80287F2D19FDCFBB120B5F72F3860154 (TreeOffset_t5F64120F339E46C00A0148F0BA400D4E7DCB3580* __this, const RuntimeMethod* method) 
+{
+	{
+		// transform.position = new Vector3(0, 0.3f, 2);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		memset((&L_1), 0, sizeof(L_1));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_1), (0.0f), (0.300000012f), (2.0f), /*hidden argument*/NULL);
+		NullCheck(L_0);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_0, L_1, NULL);
+		// transform.Rotate(-90, 0, 0);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_2);
+		Transform_Rotate_m7EA47AD57F43D478CCB0523D179950EE49CDA3E2(L_2, (-90.0f), (0.0f), (0.0f), NULL);
+		// }
+		return;
+	}
+}
+// System.Void TreeOffset::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TreeOffset_Update_mCA139C1D7D4A924D4049AD52DABA11FFC2A4906E (TreeOffset_t5F64120F339E46C00A0148F0BA400D4E7DCB3580* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void TreeOffset::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TreeOffset__ctor_m39F0BC6EFFBFF159E9AA81E749FBC9C9E5DF7955 (TreeOffset_t5F64120F339E46C00A0148F0BA400D4E7DCB3580* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);

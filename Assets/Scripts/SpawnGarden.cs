@@ -17,7 +17,7 @@ public class SpawnGarden : MonoBehaviour
     public float[,] cameraPositions = new float[,] { { 0, 1.6f, -0.4f }, {5, 1.6f, -1f }, { 0, 1.6f, 4f }, { 5, 1.6f, 4f } };
     public float[,] playerPositions = new float[,] { { 0, 0, 0 }, { 5, 0, 0 }, { 0, 0, 5 }, { 5, 0, 5 } };
 
-    public Vector3 offset = new Vector3(0, -3.5f, 1);
+    public Vector3 offset = new Vector3(0, -3, 1);
 
     private GameObject playerObject;
     private GameObject gardenObject;
@@ -39,8 +39,15 @@ public class SpawnGarden : MonoBehaviour
         Debug.Log("Instantiating garden at " + position);
         
         sessionCamera.transform.position = cameraPosition;
-       
-        playerObject = PhotonNetwork.Instantiate(playerPrefab.name, playerPosition, Quaternion.identity);
+       if(PlayerPrefs.GetString("avatar") == "avatar1")
+        {
+            playerObject = PhotonNetwork.Instantiate(playerPrefab.name, playerPosition, Quaternion.identity);
+        }
+        else
+        {
+            playerObject = PhotonNetwork.Instantiate(player2Prefab.name, playerPosition, Quaternion.identity);
+        }
+        
         
         ExitGames.Client.Photon.Hashtable roomProps = PhotonNetwork.CurrentRoom.CustomProperties;
         roomProps["GardenIndex"] = gardenIndex + 1;
@@ -50,10 +57,7 @@ public class SpawnGarden : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(pos!=null)
-        //{
-        //    playerObject.transform.position = pos;
-        //}
+        
         // Update the position and rotation of the player object based on the ARSessionOrigin's transform
        playerObject.transform.position = sessionCamera.transform.position + offset;
        playerObject.transform.rotation = sessionCamera.transform.rotation;
